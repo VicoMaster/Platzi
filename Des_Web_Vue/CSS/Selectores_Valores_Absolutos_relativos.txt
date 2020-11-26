@@ -1,0 +1,111 @@
+Diferentes tipos de selectores CSS:
+
+Universal:
+
+*{
+    margin:0;
+}
+
+Tipo:
+h1{
+    color:red;
+}
+
+Clase:
+.saludo{
+    font-size: 2em;
+}
+ID:
+#id{
+    border-radius:
+    20px;
+}
+
+Para especificar por caracteres:
+
+p: first-child{
+    color: white;
+}
+
+p: last-child{
+    color: purple;
+}
+
+p: nth-child(n+2){
+    color:red;
+}
+
+Para numeros pares
+p: nth-child(2n){
+    color:red;
+}
+Para impares
+p: nth-child(2n+1){
+    color:red;
+}
+
+Pseudo-elementos:
+:: before
+:: after
+:: need-more
+
+p::frist-letter{
+    color: red;
+    font-size: 20px;
+}
+
+MODELO DE CAJA:
+
+-----------------------
+|  margin             |
+|   ______________    |
+|  | border       |   |
+|  | ____________ |   |
+|  | |padding   | |   |
+|  | | ________ | |   |
+|  | ||1319x53 || |   |
+|  | ||Contenid|| |   |
+|  | |__________| |   |
+|  |______________|   |
+|_____________________|
+
+
+
+Valores absolutos y relativos:
+ -- Unidades de Longitud --
+
+Absolutas:
+in, cm,mm,px,pt,pc,Q
+cm	| Centimeters	       | 1cm = 96px/2.54
+mm	| Millimeters	       | 1mm = 1/10th of 1cm
+Q	| Quarter-millimeters  | 1Q = 1/40th of 1cm
+in	| Inches	           | 1in = 2.54cm = 96px
+pc	| Picas	               | 1pc = 1/16th of 1in
+pt	| Points	           | 1pt = 1/72th of 1in
+px	| Pixels	           | 1px = 1/96th of 1in
+
+
+Relativas:
+vmax, vmin, em, ex, vm, vh, ch, rem 
+Relative length units
+
+Unit	Relative to
+em	 | Font size of the element.
+ex	 | x-height of the element's font.
+cap	 | Cap height (the nominal height of capital letters) of the element's font.
+ch	 | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.
+ic	 | Average character advance of a full width glyph in the element’s font, as represented by the “水” (CJK water ideograph, U+6C34) glyph.
+rem	 | Font size of the root element.
+lh	 | Line height of the element.
+rlh	 | Line height of the root element.
+vw	 | 1% of viewport's width.
+vh	 | 1% of viewport's height.
+vi	 | 1% of viewport's size in the root element's inline axis.
+vb	 | 1% of viewport's size in the root element's block axis.
+vmin | 1% of viewport's smaller dimension.
+vmax | 1% of viewport's larger dimension.
+
+
+
+Todos los elementos en CSS son cuadrados o rectángulos y aparte de eso, estos elementos tienen un comportamiento que se define a través de la propiedad display.
+Los display más comunes y usados son: block, inline, inline-block, none, table, flex y grid. 

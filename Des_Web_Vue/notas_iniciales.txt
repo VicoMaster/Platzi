@@ -1,0 +1,19 @@
+HTTP: Hyper Text Transfer protocol
+URL: Uniform Resource Locator
+HTML: Hyper Text Markup Language
+CSS: Cascade Style Sheets
+
+
+DOCUMENTACION: HTML Reference.io
+               CSS Reference.io
+
+DOM: Document Object Model
+CSSOM: CSS Object Model
+RENDER TREE: El DOM y el CSSOM que se mezclan para renderizar lo que se quiere
+
+PROCESOS DEL NAVEGADOR:
+1. Procesa el HTML y contruye el DOM
+2. Procesa CSS y construye el CSSOM
+3. DOM + CSSOM = Render TREE
+4. Ejecuta el Diseño en el Render TREE
+5. Pinta el nodo en la pantalla

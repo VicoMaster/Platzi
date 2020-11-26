@@ -1,5 +1,4 @@
 PostgreSQL:
-
 OpenSource
 Objeto-Relacional en su nucleo
 Usa SQL

@@ -13,6 +13,7 @@ Cumple el estandar ACID: Atomicity-Consistency-Isolation-Durability (Atomicidad,
 ---------------------------------------------------------------------------
 USUARIOS:
 Por defecto: postgres - postgres123
+ABRIR DESDE LINUX: sudo -u postgres postgres123
 ---------------------------------------------------------------------------
 COMANDOS SQL SHELL:
 

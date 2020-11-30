@@ -15,6 +15,7 @@ CREATE DATABASE nombre_db;     :crea una base de datos
 \i <nombre_archivo>            :Ejecutar los comandos desde un archivo
 \e                             :Permite abrir un editor de texto plano, escribir comandos y ejecutar en lote. 
 \q                             :Cerrar la consola
+\h                             :Con este comando veremos la información de todas las consultas SQL
 ---------------------------------------------------------------------------
 FUNCIONES: 
 

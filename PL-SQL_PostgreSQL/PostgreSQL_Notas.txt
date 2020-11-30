@@ -16,24 +16,6 @@ USUARIOS:
 Por defecto: postgres - postgres123
 ABRIR DESDE LINUX: sudo -u postgres postgres123
 ---------------------------------------------------------------------------
-COMANDOS SQL SHELL:
-
-CREATE DATABASE nombre_db;     :crea una base de datos
-\C transporte_publico          :posiciona el cursor en la base de datos mencionada
-\?                             :saber todos los comandos de "back slash"
-\l                             :mostrar todas las bases de datos 
-\dt                            :tablas de postgresql
-\d                             :describir una tabla
-\g                             :volver a ejecutar el comando anterior
-\du                            :Listar los usuarios y sus roles de la base de datos actual
-\df                            :Listar las funciones disponibles de la base de datos actual
-\dv                            :Listar las vistas de la base de datos actual
-\s                             :Ver el historial de comandos ejecutados
-\s                             :<nombre_archivo> Si se quiere guardar la lista de comandos ejecutados en un archivo de texto plano
-\i <nombre_archivo>            :Ejecutar los comandos desde un archivo
-\e                             :Permite abrir un editor de texto plano, escribir comandos y ejecutar en lote. 
-\q                             :Cerrar la consola
----------------------------------------------------------------------------
 Archivos problematicos/importantes:
 
 postgresql.conf    : Configuraciones globales de postgres

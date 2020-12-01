@@ -22,3 +22,25 @@ postgresql.conf    : Configuraciones globales de postgres
 pg_hba.conf        : Muestra los roles y tipos de acceso que se tienen a la DATABASE
 pg_ident.conf      : Nos permite mapear usuarios desde el sistema operativo a roles de DB
 
+---------------------------------------------------------------------------
+TIPOS DE DATOS:
+
+• Numéricos
+• Monetarios
+• Texto
+• Binarios
+• Fecha / Hora
+• Boolean
+
+ESPECIALES - Propios de PostgreSQL:
+
+• Geométricos: Permite usando X y Y calcular distancias y areas
+• Dirección de red: Almacena ips y permite hacer calculos de mascaras de red
+• Texto tipo bit: Permite hacer calculos en otros sistemas por ejemplo hexadecimal o binario
+• XML, JSON: Permite guardar este tipo de mensajes
+• Arreglos: Consiste en vectores y matrices. Se puede operar entre ellos.
+
+---------------------------------------------------------------------------
+
+Llaves primarias (PK): Nos permiten crear valores unicos con los cuales identificamos objetos dentro de una tabla. 
+Llaves foraneas (FK): Identifica una columna o grupo de columnas en una tabla que se refiere a una columna o grupo de columnas en otra tabla.

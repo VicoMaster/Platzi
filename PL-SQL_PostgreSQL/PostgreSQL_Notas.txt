@@ -44,3 +44,23 @@ ESPECIALES - Propios de PostgreSQL:
 
 Llaves primarias (PK): Nos permiten crear valores unicos con los cuales identificamos objetos dentro de una tabla. 
 Llaves foraneas (FK): Identifica una columna o grupo de columnas en una tabla que se refiere a una columna o grupo de columnas en otra tabla.
+
+---------------------------------------------------------------------------
+
+• Servidor de base de datos: Computador que tiene un motir de base de datos instalado y en ejecución 
+• Motor de base de datos: Software que provee un conjunto de servicios encargados de administrar una base de datos.
+• Base de datos: Grupo de datos que pertenecen a un mismo contexto.
+• Esquemas de base de datos en PostgreSQL: Grupo de objetos de base de datos que guarda relación entre si(tablas, funciones, relaciones, secuencias).
+• Tablas de base de datos: Estructura que organiza los datos en filas y columnas formando una matriz.+
+
+---------------------------------------------------------------------------
+ACCIONES DB
+
+• CREATE: Sirve para inicializar  la estructura de la tabla sin ningun tipo de dato 
+• ALTER: Cuando la tabla esta creada o tiene datos, sirve para crear o eliminar columnas, cambiar indices, agregar llaves primarias e inclusive agregar roles como propietarios de la tabla.
+• DROP: Borrar  la tabla con toda su  información o (DROP DATABASE base_datos) para borrar una base de datos no activa (con conexiones activas)
+
+---------------------------------------------------------------------------
+CONVENCIONES DE NOMBRES
+• Sintaxis del lenguaje PL-SQL en MAYUSCULA
+• nombres de bases de datos y tablas en minucula

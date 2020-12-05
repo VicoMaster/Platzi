@@ -11,22 +11,25 @@ COMANDOS SQL SHELL:
 \df                            :Listar las funciones disponibles de la base de datos actual
 \dv                            :Listar las vistas de la base de datos actual
 \s                             :Ver el historial de comandos ejecutados
-\s                             :<nombre_archivo> Si se quiere guardar la lista de comandos ejecutados en un archivo de texto plano
-\i <nombre_archivo>            :Ejecutar los comandos desde un archivo
+\s                             :<nombre_archivo--  Si se quiere guardar la lista de comandos ejecutados en un archivo de texto plano
+\i <nombre_archivo--             :Ejecutar los comandos desde un archivo
 \e                             :Permite abrir un editor de texto plano, escribir comandos y ejecutar en lote. 
 \q                             :Cerrar la consola
 \h                             :Con este comando veremos la información de todas las consultas SQL
 \! cls                         :Limpiar pantalla
 ---------------------------------------------------------------------------
 */
-SQL: 
+-- SQL: 
 
-SELECT VERSION();              :Consultar version de postgresql
-CREATE DATABASE nombre_db;     :crea una base de datos
+-- Consultar version de postgresql
+SELECT VERSION();              
 
->Crear tabla:
+-- crea una base de datos
+CREATE DATABASE nombre_db;     :
+
+-- Crear tabla:
 CREATE TABLE tren (id serial NOT NULL, modelo character varying, capacidad integer, CONSTRAINT tren_pkey PRIMARY KEY (id));
->>Crear tabla con PGADMIN:
+-- -- Crear tabla con PGADMIN:
 CREATE TABLE public.pasajero
 (
     id serial,
@@ -42,23 +45,38 @@ ALTER TABLE public.pasajero
     OWNER to postgres;
 
 
->Inserción de datos:
+-- Inserción de datos:
 INSERT INTO tren(modelo, capacidad) VALUES ('tesla 1', 7);
 
->Consultar todos los datos:
+-- Consultar todos los datos:
 SELECT * FROM tabla;
 
->Actualizar datos de TABLA:
+-- Actualizar datos de TABLA:
 UPDATE tren SET modelo = 'tesla 2' WHERE id = 2; 
 
->Eliminar Datos:
+-- Eliminar Datos:
 SELECT * FROM tren WHERE id=3;   
 
->Encriptar un texto:
+-- Encriptar un texto:
 SELECT MD5('Este texto sera encriptado');
 
->Creación de tabla con PGADMIN:
+-- Creación de tabla con PGADMIN:
 CREATE DATABASE transporte WITH OWNER = postgres ENCODING = 'UTF8' CONNECTION LIMIT = -1;
 
->Consulta la fecha del sistema:
+-- Consulta la fecha del sistema:
 SELECT current_date; #2019-10-03
+
+-- Creando una llave foranea:
+CONSTRAINT fk_Asignatura FOREIGN KEY (IdAsignatura) REFERENCES Asignatura (Id);
+
+-- Cambiar nombre de columna en tabla:
+ALTER TABLE nombre_tabla RENAME COLUMN actual_nombre_columna TO nuevo_nombre_columna;
+
+-- Consultar tablas de postgresql que no sean parte del motor
+SELECT tablename FROM pg_tables WHERE schemaname = 'public';
+
+-- Crear tabla con llaves privadas y foraneas:
+CREATE TABLE trayectos (trayectos_id serial NOT NULL, est_id int NOT NULL, tren_id int NOT NULL, trayect_nom char(50) NOT NULL, CONSTRAINT fk_est_id FOREIGN KEY (est_id) REFERENCES estaciones (est_id), CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id), CONSTRAINT trayectos_pkey PRIMARY KEY (trayectos_id));  
+
+-- Añadir llave primaria a tabla:
+ALTER TABLE trayectos ADD PRIMARY KEY (trayectos_id);

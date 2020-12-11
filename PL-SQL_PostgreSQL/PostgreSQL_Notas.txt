@@ -64,3 +64,9 @@ ACCIONES DB
 CONVENCIONES DE NOMBRES
 • Sintaxis del lenguaje PL-SQL en MAYUSCULA
 • nombres de bases de datos y tablas en minucula
+
+---------------------------------------------------------------------------
+PARTICIONES:
+
+• Separación fisica de datos.
+• Estructura Lógica

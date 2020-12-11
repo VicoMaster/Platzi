@@ -76,7 +76,19 @@ ALTER TABLE nombre_tabla RENAME COLUMN actual_nombre_columna TO nuevo_nombre_col
 SELECT tablename FROM pg_tables WHERE schemaname = 'public';
 
 -- Crear tabla con llaves primarias y foraneas:
-CREATE TABLE trayectos (trayectos_id serial NOT NULL, est_id int NOT NULL, tren_id int NOT NULL, trayect_nom char(50) NOT NULL, CONSTRAINT fk_est_id FOREIGN KEY (est_id) REFERENCES estaciones (est_id), CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id), CONSTRAINT trayectos_pkey PRIMARY KEY (trayectos_id));  
+CREATE TABLE trayectos (trayectos_id serial NOT NULL, est_id int NOT NULL, tren_id int NOT NULL, trayect_nom char(50) NOT NULL, CONSTRAINT fk_est_id FOREIGN KEY (est_id) REFERENCES estaciones (est_id), CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id), CONSTRAINT trayectos_pkey PRIMARY KEY (trayectos_id)); 
 
 -- Añadir llave primaria a tabla:
 ALTER TABLE trayectos ADD PRIMARY KEY (trayectos_id);
+
+-- Crear partición en tabla
+CREATE TABLE public.bitacora_viaje(
+    id serial,
+    id_viaje integer,
+    fecha date
+) PARTITION BY RANGE (fecha)
+WITH(
+    OIDS = FALSE
+);
+ALTER TABLE public.bitacora_viaje
+OWNER to postgres;

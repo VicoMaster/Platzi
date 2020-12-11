@@ -70,3 +70,5 @@ PARTICIONES:
 
 • Separación fisica de datos.
 • Estructura Lógica
+• Para acceder a los datos se usa sin ninguna variación las consultas SQL
+• Con el mismo nombre de la tabla asigna otras pequeñas tablas que tienen un rango definido (fechas, horas)

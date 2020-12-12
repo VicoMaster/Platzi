@@ -56,7 +56,7 @@ SELECT * FROM tabla;
 UPDATE tren SET modelo = 'tesla 2' WHERE id = 2; 
 
 -- Eliminar Datos:
-SELECT * FROM tren WHERE id=3;   
+DELETE FROM tren WHERE id=3;   
 
 -- Encriptar un texto:
 SELECT MD5('Este texto sera encriptado');
@@ -100,6 +100,7 @@ ALTER TABLE libros DROP CONSTRAINT CK_libros_precio_positivo;
 
 -- Vaciar datos de tabla con llaves foraneas en cascada
 TRUNCATE othertable CASCADE;
+TRUNCATE TABLE nombre_tabla RESTART IDENTITY; -- restablecer auto incrementar / sequence
 
 -- Añadir llave primaria a tabla:
 ALTER TABLE trayectos ADD PRIMARY KEY (trayectos_id);
@@ -149,3 +150,9 @@ GRANT INSERT, SELECT, UPDATE, DELETE ON TABLE public.estaciones TO usuario_consu
 -- Revocar privilegios:
 REVOKE ALL PRIVILEGES ON DATABASE transporte_masivo FROM usuario_consulta;
 REVOKE ALL PRIVILEGES ON TABLE public.estaciones FROM usuario_consulta;  
+
+-- Otocargar acceso a la clase secuencia incremental para tablas a un rol
+GRANT USAGE, SELECT ON SEQUENCE trenes_id_seq TO usuario_consulta;  
+
+-- Saber que id tienen las DB de postgres
+SELECT datid,datname from pg_stat_database;

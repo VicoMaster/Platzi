@@ -72,3 +72,13 @@ PARTICIONES:
 • Estructura Lógica
 • Para acceder a los datos se usa sin ninguna variación las consultas SQL
 • Con el mismo nombre de la tabla asigna otras pequeñas tablas que tienen un rango definido (fechas, horas)
+• No permiten llaves primarios ya que la idea es llenarlo con llaves primarios de otras tablas
+
+---------------------------------------------------------------------------
+ROLES:
+
+• Crear y eliminar roles (se pueden editar permisos de roles creados para esto)
+• Asignar atributos
+• agrupar con otros roles
+• Roles predeterminados
+• Los roles son independientes a la DB

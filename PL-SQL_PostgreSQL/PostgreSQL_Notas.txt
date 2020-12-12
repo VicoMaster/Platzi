@@ -93,3 +93,11 @@ LLLAVES FORANEAS:
 ---------------------------------------------------------------------------
 Pagina para crear data de pruebas:
 https://mockaroo.com/
+
+---------------------------------------------------------------------------
+JOIN:
+Es toda la teoría de conjuntos implementada en SQL
+• JOIN (INNER)
+• LEFT [OUTER]
+• RIGHT [OUTER]
+• FULL OUTER

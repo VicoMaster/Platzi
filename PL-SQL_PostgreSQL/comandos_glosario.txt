@@ -156,3 +156,6 @@ GRANT USAGE, SELECT ON SEQUENCE trenes_id_seq TO usuario_consulta;
 
 -- Saber que id tienen las DB de postgres
 SELECT datid,datname from pg_stat_database;
+
+-- JOIN o INNER JOIN
+SELECT * FROM pasajeros JOIN viajes ON (viajes.pasajero_id = pasajeros.pasajero_id); -- Saber que pasajeros han realizado al menos un viaje

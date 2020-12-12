@@ -89,3 +89,7 @@ LLLAVES FORANEAS:
 • Tabla origen
 • Tabla destino
 • Acciones (NO ACTION, RESTRICT, CASCADE, SET NULL, SET DEFAULT)
+
+---------------------------------------------------------------------------
+Pagina para crear data de pruebas:
+https://mockaroo.com/

@@ -105,6 +105,22 @@ INSERT INTO public.bitacora_viaje(
 -- Eliminar tabla
 DROP TABLE films;
 
---- Cear un ROL:
+-- Cear un ROL:
 CREATE ROLE usuario_consulta;
 
+-- Alterar ROL para que se pueda loguear a la DB:
+ALTER ROLE usuario_consulta WITH LOGIN NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+
+-- Alterar ROL para agregarle una CONTRASEÑA
+ALTER ROLE usuario_consulta WITH PASSWORD 'usuario_consulta':
+
+-- BORRAR UN USUARIO:
+DROP ROLE usuario_consulta;
+
+-- Agregar un usuario a una tabla con permisos de consulta, insert, update, delete
+
+GRANT INSERT, SELECT, UPDATE, DELETE ON TABLE public.estaciones TO usuario_consulta;
+
+-- Revocar privilegios:
+REVOKE ALL PRIVILEGES ON DATABASE transporte_masivo FROM usuario_consulta;
+REVOKE ALL PRIVILEGES ON TABLE public.estaciones FROM usuario_consulta;  

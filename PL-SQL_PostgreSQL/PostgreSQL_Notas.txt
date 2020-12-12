@@ -88,4 +88,4 @@ LLLAVES FORANEAS:
 • La que proporciona la Consiste de nuestro ACID. Todas las tablas tienen relacion entre si y la información es congruente.
 • Tabla origen
 • Tabla destino
-• Acciones
+• Acciones (NO ACTION, RESTRICT, CASCADE, SET NULL, SET DEFAULT)

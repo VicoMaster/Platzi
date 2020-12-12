@@ -70,6 +70,10 @@ SELECT current_date; #2019-10-03
 -- Creando una llave foranea:
 CONSTRAINT fk_Asignatura FOREIGN KEY (IdAsignatura) REFERENCES Asignatura (Id);
 
+ALTER TABLE trayectos ADD CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id) MATCH SIMPLE
+ON UPDATE CASCADE
+ON DELETE CASCADE NOT VALID;
+
 -- Cambiar nombre de columna en tabla:
 ALTER TABLE nombre_tabla RENAME COLUMN actual_nombre_columna TO nuevo_nombre_columna;
 
@@ -77,7 +81,23 @@ ALTER TABLE nombre_tabla RENAME COLUMN actual_nombre_columna TO nuevo_nombre_col
 SELECT tablename FROM pg_tables WHERE schemaname = 'public';
 
 -- Crear tabla con llaves primarias y foraneas:
-CREATE TABLE trayectos (trayectos_id serial NOT NULL, est_id int NOT NULL, tren_id int NOT NULL, trayect_nom char(50) NOT NULL, CONSTRAINT fk_est_id FOREIGN KEY (est_id) REFERENCES estaciones (est_id), CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id), CONSTRAINT trayectos_pkey PRIMARY KEY (trayectos_id)); 
+CREATE TABLE trayectos 
+  ( 
+     trayectos_id SERIAL NOT NULL, 
+     est_id       INT NOT NULL, 
+     tren_id      INT NOT NULL, 
+     trayect_nom  CHAR(50) NOT NULL, 
+     CONSTRAINT fk_est_id FOREIGN KEY (est_id) REFERENCES estaciones (est_id), 
+     CONSTRAINT fk_tren_id FOREIGN KEY (tren_id) REFERENCES trenes (tren_id), 
+     CONSTRAINT trayectos_pkey PRIMARY KEY (trayectos_id) MATCH SIMPLE
+     ON UPDATE CASCADE
+     ON DELETE CASCADE
+     NOT VALID;
+  ); 
+
+-- Eliminar CONSTRAINT
+ALTER TABLE libros DROP CONSTRAINT CK_libros_precio_positivo;
+
 
 -- Añadir llave primaria a tabla:
 ALTER TABLE trayectos ADD PRIMARY KEY (trayectos_id);

@@ -98,6 +98,8 @@ CREATE TABLE trayectos
 -- Eliminar CONSTRAINT
 ALTER TABLE libros DROP CONSTRAINT CK_libros_precio_positivo;
 
+-- Vaciar datos de tabla con llaves foraneas en cascada
+TRUNCATE othertable CASCADE;
 
 -- Añadir llave primaria a tabla:
 ALTER TABLE trayectos ADD PRIMARY KEY (trayectos_id);
@@ -124,6 +126,9 @@ INSERT INTO public.bitacora_viaje(
 
 -- Eliminar tabla
 DROP TABLE films;
+
+-- Eliminar columna
+ALTER TABLE public.tren DROP COLUMN capacidad;
 
 -- Cear un ROL:
 CREATE ROLE usuario_consulta;

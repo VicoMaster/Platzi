@@ -101,3 +101,18 @@ Es toda la teoría de conjuntos implementada en SQL
 • LEFT [OUTER]
 • RIGHT [OUTER]
 • FULL OUTER
+
+---------------------------------------------------------------------------
+FUNCIONES ESPECIALES:
+• ON CONFLICT DO: Ayuda a solucionar problemas cuando queremos insertar o modificar datos en una tabla que no podamos y justamente despues se hace la actualización.
+• RETURNING: Devolver todos los cambios que hemos hecho sobre la base de datos, como en un insert todo los datos que fueron correctamente insertados.
+• LIKE / ILIKE: Sirve para hacer busqueda al estilo de expresiones regulares como que empiecen con "O" o terminen con la letra "Z"
+• IS/IS NOT: Para comparar 2 tipos de datos que no sean estandar como numero o alfa numerico, objeto, nullo...etc...
+
+---------------------------------------------------------------------------
+FUNCIONES ESPECIALES AVANZADAS:
+• COALESCE: Comparar 2 valores y retornar cual de los 2 no es nulo
+• NULLIF: Permite comparar 2 valores y retorna null si son iguales
+• GREATEST: Compara un arreglo de valores y retorna el mayor
+• LEAST: Compara un arreglo de valores y retorna el menor
+• BLOQUES ANÓNIMOS: Permite ingresar condicionales dentro de una consulta de DB

@@ -159,3 +159,5 @@ SELECT datid,datname from pg_stat_database;
 
 -- JOIN o INNER JOIN
 SELECT * FROM pasajeros JOIN viajes ON (viajes.pasajero_id = pasajeros.pasajero_id); -- Saber que pasajeros han realizado al menos un viaje
+-- LEFT JOIN
+SELECT * FROM pasajeros LEFT JOIN viajes ON (pasajeros.pasajero_id = viajes.pasajero_id) WHERE viajes.pasajero_id IS NULL;  -- saber que pasajeros no han viajado

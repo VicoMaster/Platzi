@@ -184,6 +184,6 @@ FROM public.pasajero;
 
 
 -- Que nombres de pasajeros comienzan su nombre por la O o P y quienes tienen mas de 18 años
-SELECT  *
+SELECT  * 
        ,CASE WHEN pasajero_fecha_nacimiento > '1996-01-02' THEN 'NIÑA' ELSE 'NIÑO' END AS SEXO
 FROM pasajeros; 

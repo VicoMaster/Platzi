@@ -187,3 +187,9 @@ FROM public.pasajero;
 SELECT  * 
        ,CASE WHEN pasajero_fecha_nacimiento > '1996-01-02' THEN 'NIÑA' ELSE 'NIÑO' END AS SEXO
 FROM pasajeros; 
+
+-- LIKE % uno o cualquier valor _ un valor  I
+SELECT *, case when pasajero_nom like 'O%'
+
+-- ILIKE, buscar entre mayus o minus:
+SELECT 

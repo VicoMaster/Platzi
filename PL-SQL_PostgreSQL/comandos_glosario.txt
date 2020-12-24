@@ -240,4 +240,37 @@ WITH NO DATA;
 -- LLENAR VISTA MATERIALIZADA
 REFRESH MATERIALIZED VIEW despues_noche_mview;
 
--- Procedimiento almacenado PLPGLSQL
+-- Procedimiento almacenado PLPGSQL
+DO $$
+DECLARE
+rec record;
+contador integer := 0;
+BEGIN
+FOR rec IN SELECT * FROM pasajeros LOOP
+    RAISE NOTICE 'Un pasajero se llama %', rec.pasajero_nom;
+    contador := contador + 1;
+END LOOP;
+RAISE NOTICE 'Conteo es %', contador;
+END
+$$
+
+-- Crear o Editar procedimiento almacenado PLPGSQL
+CREATE OR REPLACE FUNCTION importantepl()
+RETURNS integer
+AS $$
+DECLARE
+rec record;
+contador integer := 0;
+BEGIN
+FOR rec IN SELECT * FROM pasajeros LOOP
+    RAISE NOTICE 'Un pasajero se llama %', rec.pasajero_nom;
+    contador := contador + 1;
+END LOOP;
+RAISE NOTICE 'Conteo es %', contador;
+RETURN contador;
+END
+$$
+LANGUAGE PLPGSQL;
+
+-- Consultar la PL creada
+SELECT importantepl();

@@ -116,3 +116,16 @@ FUNCIONES ESPECIALES AVANZADAS:
 • GREATEST: Compara un arreglo de valores y retorna el mayor
 • LEAST: Compara un arreglo de valores y retorna el menor
 • BLOQUES ANÓNIMOS: Permite ingresar condicionales dentro de una consulta de DB
+
+---------------------------------------------------------------------------
+VISTAS
+Una vista es agarrar una consulta que se repite mucho y convertirla en un solo nombre
+
+• Vista Volatil:  Siempre que se haga la consulta la vista la DB hará la ejecución en la DB, por lo tanto siempre se tendra información actualizada.
+• Vista Materializada: Solo se hace la consulta 1 vez y el resultado se almacena en un modulo, y la siguiente que se consulte nuevamente traera este resultado de la memoria
+
+---------------------------------------------------------------------------
+PL/PgSQL (Procedural Language/PostgreSQL Estructured Queary Language)
+ 
+ • Procedimientos almacenados
+ • Bloque de codigo en lenguaje PLPGSQL

@@ -52,6 +52,12 @@ ALTER TABLE public.pasajero
 -- Inserción de datos:
 INSERT INTO tren(modelo, capacidad) VALUES ('tesla 1', 7);
 
+INSERT INTO bitacora_pasajeros(bitacora_total, bitacora_time) VALUES (
+(SELECT  COUNT(*)
+FROM pasajeros),
+(SELECT  TO_CHAR(now(),'DD-MM-YYYY HH12:MI:SS')));
+
+
 -- Consultar todos los datos:
 SELECT * FROM tabla;
 
@@ -275,7 +281,40 @@ END
 $$
 LANGUAGE PLPGSQL;
 
+
+CREATE OR REPLACE FUNCTION importantepl() -- Funcion para Trigger
+RETURNS TRIGGER
+LANGUAGE PLPGSQL
+AS $BODY$
+DECLARE
+rec record;
+contador integer := 0;
+BEGIN
+FOR rec IN SELECT * FROM pasajeros LOOP
+    contador := contador + 1;
+END LOOP;
+RAISE NOTICE 'EL TRIGGER SE DISPARO CON #', contador;
+INSERT INTO bitacora_pasajeros(bitacora_total, bitacora_time) 
+VALUES ((SELECT  COUNT(*) FROM pasajeros), (SELECT  TO_CHAR(now(),'DD-MM-YYYY HH12:MI:SS')));
+RETURN NEW;
+END
+$BODY$;
+
+ALTER FUNCTION public.importantepl()
+    OWNER TO usuario_consulta;
+
+
+
 -- Consultar la PL creada
 SELECT importantepl();
 
---
+-- Triggers
+CREATE TRIGGER mitrigger
+AFTER DELETE
+ON pasajeros
+FOR EACH ROW
+EXECUTE PROCEDURE importantepl();
+
+-- Rename Trigger 
+ALTER TRIGGER mitrigger ON pasajeros
+RENAME TO pasajeros_trigger_insert;

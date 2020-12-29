@@ -133,6 +133,9 @@ PL/PgSQL (Procedural Language/PostgreSQL Estructured Queary Language)
 ---------------------------------------------------------------------------
 TRIGGERS
 • Permiten ejecutar funciones dependiendo de acciones que se ejecuten en una tabla (Insert, update, delete)
-  Tienen 2 variables globales  OLD (deje el cambio como estaba antes de la intervencion)  y NEW 
+• Tienen 2 variables globales  OLD (deje el cambio como estaba antes de la intervencion)  y NEW 
 
-
+---------------------------------------------------------------------------
+DATOS EXTERNOS
+• Obtener datos de hosts remotos (dblink)
+• Extensión de PostgreSQL que no viene por defecto instalada

@@ -318,3 +318,5 @@ EXECUTE PROCEDURE importantepl();
 -- Rename Trigger 
 ALTER TRIGGER mitrigger ON pasajeros
 RENAME TO pasajeros_trigger_insert;
+
+-- DB Remotas

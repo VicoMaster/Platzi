@@ -127,5 +127,11 @@ Una vista es agarrar una consulta que se repite mucho y convertirla en un solo n
 ---------------------------------------------------------------------------
 PL/PgSQL (Procedural Language/PostgreSQL Estructured Queary Language)
  
- • Procedimientos almacenados
- • Bloque de codigo en lenguaje PLPGSQL
+• Procedimientos almacenados
+• Bloque de codigo en lenguaje PLPGSQL
+
+---------------------------------------------------------------------------
+TRIGGERS
+• Permiten ejecutar funciones dependiendo de acciones que se ejecuten en una tabla (Insert, update, delete)
+
+

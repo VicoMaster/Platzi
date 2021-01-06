@@ -139,3 +139,8 @@ TRIGGERS
 DATOS EXTERNOS
 • Obtener datos de hosts remotos (dblink)
 • Extensión de PostgreSQL que no viene por defecto instalada
+
+---------------------------------------------------------------------------
+TRANSACCIONES
+• Prcesos complejos seguros
+* BEGIN <query>,COMMIT,ef ROLLBACK

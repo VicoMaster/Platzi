@@ -320,3 +320,27 @@ ALTER TRIGGER mitrigger ON pasajeros
 RENAME TO pasajeros_trigger_insert;
 
 -- DB Remotas
+CREATE EXTENSION dblink; -- extension que usa postgresql para consultas a DB remotas
+
+SELECT * FROM dblink(
+    'dbname=remota
+    port=5432
+    host=127.0.0.1
+    user=usuario_consulta
+    password=usuario_consulta',
+    'SELECT * FROM pasajeros_vip;')
+	AS datos_remotos (pasajero_id integer, fecha_vip date);
+
+SELECT * FROM pasajeros
+JOIN
+dblink(
+    'dbname=remota
+    port=5432
+    host=127.0.0.1
+    user=usuario_consulta
+    password=usuario_consulta',
+    'SELECT * FROM pasajeros_vip;')
+	AS datos_remotos (pasajero_id integer, fecha_vip date)
+ON (pasajeros.pasajero_id = datos_remotos.pasajero_id); -- USING(pasajero_id);
+
+-- Transacciones

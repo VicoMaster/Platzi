@@ -167,6 +167,9 @@ MANTENIMIENTO
 • REINDEX
 • CLUSTER
 
+PRINCIPAL LIMITACION DE RENDIMIENTO:
+IOPS (del inglés Input/Output Operations Per Second, operaciones de entrada/salida por segundo) 
+
 ---------------------------------------------------------------------------
 REPLICAS
 https://app.cloudjiffy.co/
@@ -174,6 +177,6 @@ https://app.cloudjiffy.co/
 • Configurar mas de 2 replicas para buenas practicas por posible crecimiento
 ---------------------------------------------------------------------------
 BUENAS PRACTICAS
-• 
+• Evitar los bloqueos por inserciones y borrados en la misma tabla. Se utiliza con algo llamado renombrar tablas
 • 
 • 

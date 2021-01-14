@@ -377,3 +377,4 @@ COMMIT;
 -- Extension levenshtein
 CREATE EXTENSION fuzzystrmatch;
 SELECT levenshtein ('Andres','Andrez'); -- Retorna 1 que es la cantidad de letras que hay que cambiar
+

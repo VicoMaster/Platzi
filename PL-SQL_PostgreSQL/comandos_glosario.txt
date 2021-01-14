@@ -61,6 +61,9 @@ FROM pasajeros),
 -- Consultar todos los datos:
 SELECT * FROM tabla;
 
+-- Consultar datos con un determinado rango
+SELECT * FROM public.trenes ORDER BY id DESC LIMIT 100;
+
 -- Actualizar datos de TABLA:
 UPDATE tren SET modelo = 'tesla 2' WHERE id = 2; 
 
@@ -344,3 +347,33 @@ dblink(
 ON (pasajeros.pasajero_id = datos_remotos.pasajero_id); -- USING(pasajero_id);
 
 -- Transacciones
+BEGIN;
+
+INSERT INTO vip (id,fecha)
+VALUES (50,NOW());
+
+DO $$
+DECLARE 
+	rec record;
+	x integer := 0;
+BEGIN 
+	FOR rec IN
+		SELECT *
+		FROM vip
+	LOOP
+		x:= x+1;
+	END LOOP;
+	
+	IF 
+		x>3 THEN x=0;
+		ROLLBACK;
+	END IF;
+END 
+$$;
+
+COMMIT;
+
+
+-- Extension levenshtein
+CREATE EXTENSION fuzzystrmatch;
+SELECT levenshtein ('Andres','Andrez'); -- Retorna 1 que es la cantidad de letras que hay que cambiar

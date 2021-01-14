@@ -143,4 +143,35 @@ DATOS EXTERNOS
 ---------------------------------------------------------------------------
 TRANSACCIONES
 • Prcesos complejos seguros
-* BEGIN <query>,COMMIT,ef ROLLBACK
+• BEGIN <query>,COMMIT,ef ROLLBACK
+• Si alguno de los procesos seguros falla, tiene que devolver todos los cambios 
+
+---------------------------------------------------------------------------
+OTRAS EXTENSIONES PARA Postgres
+Sirven para hacer habilitar funciones que permiten hacer: Calculos, analisis, prototipado y ML
+https://www.postgresql.org/docs/11/contrib.html  -- Aqui se listan todas las extensiones de postgres
+• Distancia Levenshtein: Algoritmo matematico para comparar 2 palabras, la diferencia letra por letra. Retorna la cantidad de letras que hay que cambiar.
+• Diference: Comparar 2 palabras y la forma en la que suenan en ingles. Retorna un numero de 0 a 4, siendo 0 total mente diferente y 4 igual. 
+
+---------------------------------------------------------------------------
+BACKUPS Y RESTAURACION
+Servicios de restauración
+• pg_dump: Copia de seguridad
+• pg_restore: Restaurar desde 0
+
+---------------------------------------------------------------------------
+MANTENIMIENTO
+
+• VACUUM (full, freeze, analyze)
+• ANALYZE
+• REINDEX
+• CLUSTER
+
+---------------------------------------------------------------------------
+REPLICAS
+
+• 
+• 
+• 
+• 
+• 

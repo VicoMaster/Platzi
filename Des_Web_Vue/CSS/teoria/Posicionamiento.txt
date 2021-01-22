@@ -1,0 +1,27 @@
+------- Posicionamiento
+
+En CSS los elementos se posicionan utilizando las propiedades top (superior), bottom (inferior), left (izquierda) y right (derecha), pero sólo funcionarán si la propiedad position está establecida. Esto quiere decir que si quiero que mi elemento div esté completamente a la derecha, debo escribir en mi CSS lo siguiente:
+div { position: absolute: right: 0px; }
+
+La propiedad position tiene 7 valores diferentes: relative, absolute, fixed, sticky, static, initial e inherit. Veremos de qué se tratan:
+
+> position: relative
+El elemento se coloca en relacion a su posición normal.
+
+> position: absolute
+Los elementos con esta posición se ubican en relación al elemento relativo más cercano. Aquí podemos hacer uso de las propiedades top, bottom, left y right.
+
+> position: fixed
+El elemento se ubica en relación con la ventana del navegador y también se ve afectado por las propiedades top, bottom, left, right.
+
+> position: sticky
+El elemento se posiciona en función de la posición de desplazamiento del usuario. Si lo ubicas a la izquierda, siempre va a estar ahí sin importantar cuántas veces se haga scroll en la página.
+
+> position: static
+Los elementos HTML son estáticos por defecto, siguen el flujo normal de la página y no se ven afectados por las propiedades top, bottom, left y right
+
+> position: initial
+Ubica el elemento en la posición que tiene de forma predeterminada.
+
+> position: inherital
+Como su nombre lo indica, este valor hereda esta propiedad de su elemento padre.

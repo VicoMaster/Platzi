@@ -46,3 +46,72 @@ padding: 5px;
 
 > animation: Esta propiedad permite que animemos nuestros elementos.
 
+------- Arquitecturas CSS
+
+> Los objetivos son:
+    *Predecible: Escribir reglas claras.
+    *Reutilizable: No escribir codigo redundante.
+    *Mantenible: Que sea facil de leer y adaptarnos a los estandares.
+    *Escalable: Que pueda crecer facilmente pero sin afectar el rendimiento.
+
+>Buenas practicas
+    *Establecer reglas para que el equipo se entienda.
+    *Explicar la estructura base o dar los fundamentos del proyecto a un nuevo integrante.
+    *Establecer estándares de codificación, si se establecen reglas algo es importante definirlo
+    *Evitar hojas de estilo muy extensas
+    *Tener una buena documentación explicando ciertos aspectos del codigo.
+
+
+Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:):
+> OOCSS:
+    *OOCSS= CCS orientado a objetos: Separa el diseño del contenido. Se utiliza para reutilizar mucho mejor nuestro codigo.
+    <stytle> 
+    .globalwidth{ width: 100%}
+    </style>
+    <header class="header globalwidth">Header</header>
+
+    *SEPARACIÓN DE LA ESTRUCTURA DE LA PIEL, SEPARACIÓN DE CONTENEDORES Y CONTENIDO
+
+> BEM (block element modifier): Separa los bloques, los elementos y modificadores. 
+    
+    <header class="header">
+        <button class="header__button--red">RED</button> <!-- block, element, modifier -->
+    </header>
+
+    .button {
+        display: inline-block;
+        border-radius: 3px;
+        padding: 7px 12px;
+        border: 1px solid #D5D5D5;
+        background-image: linear-gradient(#EEE, #DDD);
+        font: 700 13px/18px Helvetica, arial;
+    }
+    .button--state-success {
+        color: #FFF;
+        background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+        border-color: #4A993E;
+    }
+    .button--state-danger {
+        color: #900;
+    }
+
+> SMACSS: Arquitectura de CSS escalable y modular.  
+    *Base: Dividir nuestro CSS en componentes base. Estos componentes son los componentes o elementos que estaremos utilizando en toda nuestra aplicación.
+    *Layout: Elementos que se utilizan en la pagina 1 sola vez. Como header o footer
+    *Module: Componentes que estaremos utilizando mas de 1 vez.
+    *State: Acciones como un boton que cambia de color al dar clic 
+    *Theme: Cuando cambien los temas se vean reflejados y sean separados del codigo.
+> ITCSS: Triangulo invertido de CSS. Poder dividir todos nuestros archivos de CSS en ciertas partes para que no se combinen entre si. podremos evitar la especificidad (elementos o clases con mayor peso que otros.) Magnitud, Claridad.
+    *Configuración:Se usa con preprocesadores y contiene fuentes, definiciones de colores, etc.
+    *Herramientas: mixins y funciones de uso mundial. Es importante no generar CSS en las primeras 2 capas.
+    *Generico: restablecer y / o normalizar estilos, definición de tamaño de caja, etc. Esta es la primera capa que genera CSS real.
+    *Elementos
+    *objetos
+    *Componentes
+    *Utilidades
+> Atomic Design: Basado en quimica. Para hacer un CSS mas modular y escalable. Separado en:
+    *Atomos: Elementos mas pequeños como botones.
+    *Moleculas: Conjunto de atomos.
+    *Organismos
+    *Templates
+    *Páginas

@@ -1,0 +1,111 @@
+:root {
+    font-family: 'Mulish', sans-serif;
+}
+
+/*BODY*/
+
+.body {
+    margin: 0px;
+    background-color: #8F57FD;
+}
+
+/*MENU*/
+
+.menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #8F57FD;
+}
+
+.menu__img {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.menu__user {
+    margin-right: 30px;
+}
+
+.menu__user-icon {
+    margin: 14px 60px 0px 0px;
+    width: 40px;
+    text-align: right;
+    display: flex;
+}
+
+.menu__user-icon img {
+    height: 50px;
+}
+
+.menu__user-icon p {
+    margin-left: 10px;
+}
+
+.menu__list {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -5px;
+}
+
+.menu__list li {
+    margin: 10px 0px;
+}
+
+.menu__list li a:hover {
+    text-decoration: underline;
+}
+
+.menu__list--white {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu__user:hover .menu__list, .menu__list:hover {
+    display: block;
+}
+
+.letra--normal {
+    color: #FFFFFF;
+}
+
+.letra--normal-bold {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/*BUSCADOR*/
+.buscador {
+    height: 300px;
+}
+
+
+.buscador__text {
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+/*GENERIC-INPUT*/
+
+.generic-input {
+    background-color: rgba(255,255, 255, 0.1);
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    width: 70%;
+    padding: 0px 20px;
+    color: #FFFFFF;
+    outline-style: none;
+}
+
+.generic-input::placeholder {
+    color: #FFFFFF;
+}

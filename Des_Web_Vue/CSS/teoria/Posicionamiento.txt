@@ -6,7 +6,7 @@ div { position: absolute: right: 0px; }
 La propiedad position tiene 7 valores diferentes: relative, absolute, fixed, sticky, static, initial e inherit. Veremos de qué se tratan:
 
 > position: relative
-El elemento se coloca en relacion a su posición normal.
+El elemento se coloca en relacion a su posición normal. Aquí podemos hacer uso de las propiedades top, bottom, left y right.
 
 > position: absolute
 Los elementos con esta posición se ubican en relación al elemento relativo más cercano. Aquí podemos hacer uso de las propiedades top, bottom, left y right.
@@ -23,5 +23,5 @@ Los elementos HTML son estáticos por defecto, siguen el flujo normal de la pág
 > position: initial
 Ubica el elemento en la posición que tiene de forma predeterminada.
 
-> position: inherital
+> position: inherit
 Como su nombre lo indica, este valor hereda esta propiedad de su elemento padre.

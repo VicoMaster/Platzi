@@ -20,4 +20,6 @@
   <time datetime="2020-05-23" pubdate>
 * <img src="puppy.png" alt="Mi mascota">: la etiqueta alt es importante para cuando no se puede renderizar la imagen o los screen reader para ciegos...
 * <a></a> Se utiliza para colocar enlaces. Se acompaña del atributo href en donde se coloca la direccion a la cual queremos dirigir.
-* 
+* <span></span>: dividir lineas de texto 
+* <div></div>: Dividir parrafos o contenedores
+* <main></main>: Contenedor especifico para resaltar contenidos. Debería solo haber 1 en todo el body.

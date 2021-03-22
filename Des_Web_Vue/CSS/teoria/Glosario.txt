@@ -72,13 +72,18 @@ Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:)
 
     *SEPARACIÓN DE LA ESTRUCTURA DE LA PIEL, SEPARACIÓN DE CONTENEDORES Y CONTENIDO
 
-> BEM (block element modifier): Separa los bloques, los elementos y modificadores. 
+> BEM (block element modifier): Separa los bloques, los elementos y modificadores. Solo se usaran clases.
     
     <header class="header">
         <button class="header__button--red">RED</button> <!-- block, element, modifier -->
     </header>
 
-    .button {
+    .bloque     /*Solo para bloques*/ 
+    .bloque__elemento       /*Solo para elementos*/ 
+    .bloque__elemento--modificador      /*Solo para modificadores*/ 
+
+
+    .header__button {
         display: inline-block;
         border-radius: 3px;
         padding: 7px 12px;
@@ -86,14 +91,21 @@ Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:)
         background-image: linear-gradient(#EEE, #DDD);
         font: 700 13px/18px Helvetica, arial;
     }
-    .button--state-success {
+    .header__button--success {
         color: #FFF;
         background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
         border-color: #4A993E;
     }
-    .button--state-danger {
+    .header__button--danger {
         color: #900;
     }
+
+    /*METODO RAPIDO*/
+    .buttonñ{}
+    .button--primary{}
+    .button--secondary{}
+    <button class="button button--primary"> Primary</button>
+
 
 > SMACSS: Arquitectura de CSS escalable y modular.  
     *Base: Dividir nuestro CSS en componentes base. Estos componentes son los componentes o elementos que estaremos utilizando en toda nuestra aplicación.

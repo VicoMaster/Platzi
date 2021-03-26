@@ -71,30 +71,6 @@
     text-decoration: underline;
 }
 
-.login__social-media>div {
-    align-items: center;
-    display: flex;
-    font-size: 14px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-}
-
-.login__social-media--facebook-span {
-    padding-left: 10px;
-}
-
-.login__social-media--google-span {
-    padding-left: 6px;
-}
-
-.fa {
-    color: white;
-}
-
-.fa:hover {
-    text-decoration: underline;
-}
-
 .login__register {
     font-size: 16px;
 }
@@ -142,6 +118,12 @@ button {
     height: 50px;
     letter-spacing: 1px;
     margin: 10px 0px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline-style: none;
 }
 
 /*FOOTER*/

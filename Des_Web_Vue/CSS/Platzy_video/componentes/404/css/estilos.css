@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Mulish', sans-serif;
+}
+
+/*MENU*/
+
+.menu {
+    align-items: center;
+    background-color: #21c08b;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+}
+
+.menu__img {
+    margin-left: 30px;
+    width: 200px;
+}
+
+/*MENSAJE*/
+
+.contenedor404 {
+    background: linear-gradient(#21c08b, #AB88FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.contenedor404__mensaje {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    padding: 60px 68px 40px;
+    width: 300px;
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+/*FOOTER*/
+
+.footer {
+    align-items: center;
+    background-color: #AB88FF;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) and (max-width: 992px) {
+    body {
+        background: linear-gradient(#21c08b, #AB88FF);
+    }
+    
+    .menu {
+        background-color: transparent;
+        top: 0px;
+        padding-right: 80px;
+        width: 100%;
+    }
+    .contenedor404 {
+        background: transparent;
+        border: none;
+        padding: 0px 20px 0px 40px;
+        min-height: 600px;
+        width: 100%;
+    }
+    .footer {
+        background-color: transparent;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 110px;
+    }
+    .footer a {
+        padding-left: 15px;
+        padding-bottom: 5px;
+    }
+}

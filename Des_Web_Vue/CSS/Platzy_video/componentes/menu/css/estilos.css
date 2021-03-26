@@ -1,4 +1,4 @@
-:root {
+* {
     font-family: 'Mulish', sans-serif;
 }
 
@@ -83,6 +83,10 @@
 /*BUSCADOR*/
 .buscador {
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

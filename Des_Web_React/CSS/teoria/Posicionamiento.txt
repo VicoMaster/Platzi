@@ -25,3 +25,25 @@ Ubica el elemento en la posición que tiene de forma predeterminada.
 
 > position: inherit
 Como su nombre lo indica, este valor hereda esta propiedad de su elemento padre.
+
+
+
+                                    static | relative|absolute | fixed
+------------------------------------------------------------------------
+posicionamiento de acuerdo        |        |         |         |
+al flujo normal                   |   SI   |   SI    |   NO    |  NO
+------------------------------------------------------------------------
+su posicion final la determinan   |        |         |         |
+top, right, bottom, left          |   NO   |   SI    |   SI    |  SI
+------------------------------------------------------------------------
+crea un nuevo contesto de         |   NO   |   SI    |   SI    |
+apilamiento                       |        |         |         |  SI
+------------------------------------------------------------------------
+
+
+> POSITIONS LOGICAL PROPERTY
+
+Top = inset-block-start
+Left = inset-inline-start
+Rigth = inset-inline-end
+Bottom = inset-block-end

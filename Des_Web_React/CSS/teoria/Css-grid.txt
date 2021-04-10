@@ -54,3 +54,17 @@ grid-template: 60% 40%/200px;
 
 
 grid-template:1fr 50px/20% 1fr;
+
+
+
+Padre: 
+* Lines
+* Track
+* Area
+* Gutters
+* Grid axis
+Hijos
+* Cell
+* Grid row
+* Grid column
+* Grid axis

@@ -1,7 +1,0 @@
-Hacer una lista de elementos que necesitamos:
-
-- Temática: "lluvia de ideas", comida, música, deportes, libros, juegos etc...
-- Figuras principales: Cuadros, circulos, líneas, overlap, letras...etc...
-- Imágenes: Imagenes de uso libre (freepik, pixabay,pexels)
-- Tipografía: Google Fonts
-- Paleta de colores: Color Hunt, Picker, ColorSpace

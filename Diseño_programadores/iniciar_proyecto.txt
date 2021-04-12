@@ -5,3 +5,11 @@ Hacer una lista de elementos que necesitamos:
 - Imágenes: Imagenes de uso libre (freepik, pixabay,pexels)
 - Tipografía: Google Fonts
 - Paleta de colores: Color Hunt, Picker, ColorSpace
+
+
+* Crear moodboard de inspiración
+* Minimo 6 Colores:
+    - 2 colores para texto 
+    - 2 Colores principales (colores de marca principal)
+    - 2 Colores secundarios (para hacer resaltes en el momento especificos de interfaz)
+* Crear una historía o un proposito

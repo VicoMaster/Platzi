@@ -1,0 +1,12 @@
+En una pagina pueden existir:
+
+> capas:
+    * Frames
+    * Grupos
+    * Elementos solos:
+        >> Texto
+        >> Formas / Vectores
+        >> Imágenes
+        >> Gifs
+    * Componentes
+        >> Instancias

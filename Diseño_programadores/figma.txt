@@ -10,3 +10,13 @@ En una pagina pueden existir:
         >> Gifs
     * Componentes
         >> Instancias
+
+Propiedades del Auto Layout:
+
+> Son frames, no grupos.
+> Los frames tienen una alineación vertical y horizontal.
+    >> Los elementos dentro de un frame vertical: left, right, center o stretch
+    >> Elementos dentro de un frame horizontal: top, bottom, center o stretch.
+> Mantienen patrones de distancia simétricos entre sus elementos hijo.
+
+

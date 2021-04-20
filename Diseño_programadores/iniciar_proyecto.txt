@@ -13,3 +13,11 @@ Hacer una lista de elementos que necesitamos:
     - 2 Colores principales (colores de marca principal)
     - 2 Colores secundarios (para hacer resaltes en el momento especificos de interfaz)
 * Crear una historía o un proposito
+
+
+
+* Guia de estilo
+    - 1 Healer maestro (debe adaptarse a diferentes tamaños)
+    - 1 botón maestro (3 instancias que representen sus diferentes estados)
+    - 1 campo de formulario maestro (3 instancias para sus diferentes estados)
+

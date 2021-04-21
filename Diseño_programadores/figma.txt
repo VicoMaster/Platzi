@@ -20,3 +20,24 @@ Propiedades del Auto Layout:
 > Mantienen patrones de distancia simétricos entre sus elementos hijo.
 
 
+> Parametros Interacciòn - Prototype:
+    * On tap: cuando se hace clic
+    * While Hovering / Pressing: mouse por encima
+    * Mouse Enter / Leave
+    * Tocuh Down / Up : Cuando toco hacìa abajo o arriba
+    
+    >> Paràmetros de acciones
+        * navigate to: Navegar pagina siguiente
+        * open overlay: traer la capa seleccionada por encima de la capa que es el punto A con una sombra en el fondo
+        * Swap with: Cambiar los elementos que se tienen seleccionados del A y B
+        * Back: Me traera al frame anterior
+        * Close Overlay:
+        * Open Link: Abrir un link
+  
+    >> Paràmetros de animación
+    * instant: Instantanea, sin efectos
+    * dissolve: Transporte lento, disminuyendo opacidad
+    * smart animate: ??
+    * move in/out: Causa que la pantalla se desplace desde izquierda/derecha/arriba o abajo o que se salga
+    * push: que entre con velocidad
+    * slide in / out: Salida

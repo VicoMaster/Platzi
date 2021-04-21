@@ -21,3 +21,12 @@ Hacer una lista de elementos que necesitamos:
     - 1 botón maestro (3 instancias que representen sus diferentes estados)
     - 1 campo de formulario maestro (3 instancias para sus diferentes estados)
 
+* Tiempo maximo de interacciones/ respuesta a una acción debe ser de 400ms como maximo "Doherty Threshold"
+
+
+
+* Reglas de UX?
+
+
+* Estilos: hacen referencia a parámetros versátiles de una marca. (Estilos de texto, colores, distancias, grillas, sombras...)
+* Componentes: hacen referencia a las diferentes partes que componen una interfaz. (lo que se reutilizará a lo largo de la interfaz.)

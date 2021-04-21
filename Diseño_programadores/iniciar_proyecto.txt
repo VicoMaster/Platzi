@@ -1,13 +1,13 @@
-Hacer una lista de elementos que necesitamos:
+* Buscar inspiración (pinterest, listarlas.)
 
-- Temática: "lluvia de ideas", comida, música, deportes, libros, juegos etc...
-- Figuras principales: Cuadros, circulos, líneas, overlap, letras...etc...
-- Imágenes: Imagenes de uso libre (freepik, pixabay,pexels)
-- Tipografía: Google Fonts
-- Paleta de colores: Color Hunt, Picker, ColorSpace
+* Hacer una lista de elementos que necesitamos:
+    - Temática: "lluvia de ideas", comida, música, deportes, libros, juegos etc...
+    - Figuras principales: Cuadros, circulos, líneas, overlap, letras...etc...
+    - Imágenes: Imagenes de uso libre (freepik, pixabay,pexels)
+    - Tipografía: (Google Fonts)
+    - Paleta de colores: (Color Hunt, Picker, ColorSpace)  Material Palette: combinar dos colores y entrega toooda una pelata de colores
 
-
-* Crear moodboard de inspiración
+* Crear moodboard de inspiración (¿poner un limite de tiempo?)
 * Minimo 6 Colores:
     - 2 colores para texto 
     - 2 Colores principales (colores de marca principal)

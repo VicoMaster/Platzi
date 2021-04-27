@@ -26,7 +26,13 @@
 
 
 * Reglas de UX?
+ - cual es mi publico objetivo?
+ - para uqe dispositivos quiero diseñar mi web
 
 
 * Estilos: hacen referencia a parámetros versátiles de una marca. (Estilos de texto, colores, distancias, grillas, sombras...)
 * Componentes: hacen referencia a las diferentes partes que componen una interfaz. (lo que se reutilizará a lo largo de la interfaz.)
+
+
+Para media_quierys:
+https://mediaqueri.es/

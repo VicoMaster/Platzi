@@ -121,7 +121,7 @@ En función Css minmax() el min representa el tamaño mínimo que va a tener cad
 |
 Con la función de auto-fit() ADAPTA las columnas DISPONIBLES ACTUALMENTE en el espacio expandiéndolas para que ocupen cualquier espacio disponible. El navegador hace eso después de LLENAR ese espacio adicional con columnas adicionales (como con el autocompletar) y luego colapsar las vacías.
 |
-Con la función de auto-fill() LLENA la fila con tantas columnas como pueda caber. Por lo tanto, crea columnas implícitas cada vez que cabe una nueva columna, porque está tratando de LLENAR la fila con tantas columnas como sea posible. Las columnas recién agregadas pueden estar vacías, pero seguirán ocupando un espacio designado en la fila.
+Con la función de auto-fill() LLENA la fila con tantas columnas como pueda caber. Por lo tanto, crea columnas implícitas cada vez que cabe una nueva columna, porque está tratando de LLENAR la fila con tantas columnas como sea posible. Las columnas recién agregadas pueden estar vacías, pero seguirán ocupando un espacio designado en la fila. CREA COLUMNAS IMAGINARIAS PARA LAS QUE VAN A ENTRAR.
 /************ Estas funciones con perfectas para el responsive design.*********/
 |
 La función fit-content() organiza un contenido en especifico el cual lo reserva y el resto seria auto.

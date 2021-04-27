@@ -1,0 +1,25 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2em;
+}
+
+.container {
+    background: rgb(59, 158, 46);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "card-1 card-2"
+    "card-3 card-3";
+    width: 600px;
+}
+
+.item-1 {
+    background: hotpink;
+    grid-area: card-1;
+}
+
+.item-2 {
+    background: aqua;
+    grid-area: card-2;
+}

@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2em;
+}
+
+.container {
+    background: papayawhip;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 600px;
+    height: 800px;
+  }
+  
+  .item:nth-child(1) {
+    background: hotpink;
+    place-self: center stretch;
+  }
+  
+  .item:not(:nth-child(1)) {
+    background: turquoise;
+  }

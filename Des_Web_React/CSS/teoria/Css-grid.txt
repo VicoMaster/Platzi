@@ -16,6 +16,7 @@ grid-column-start: 3
 grid-column-end: span 2; /*Longitud de columnas avanzadas*/
 }
 
+
 grid-column: span 3/5;
 grid-row-start: 3;
 grid-row: span 3/6
@@ -26,6 +27,17 @@ grid-row: 5;
 
 grid-column: 2/6;
 grid-row: 1/6;
+
+
+> grid-column: 1/2 /*Que inicie en la linea 1 y termine en la linea 2*/
+
+
+grid-auto-columns: 60px;
+/*Cada vez que llegue un nuevo elemento crea una columna de ese tamaño exacto*/
+
+> grid-auto-flow: row | column | row dense | column dense #dense solo cambia el orden visual de sus elementos
+/*Se definen grids dependiendo de la necesidad para que se creen de manera automatica*/
+
 
 grid-area: 1 / 1 / 3 / 6;
 grid-row-start, grid-column-start, grid-row-end,  grid-column-end
@@ -57,6 +69,14 @@ grid-template:1fr 50px/20% 1fr;
 
 
 
+grid-template-columns: repeat(3, minmax(200px, 300px)) /*minimo y maximo de card*/
+
+grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)) /*Esparce las columnas en todo el ancho del tamaño disponible de pantalla
+
+/*Con auto-fill ocupa el espacio que sobre en el ancho de la pantalla*/
+
+grid-template-columns: auto fit-content(800px) auto;
+
 Padre: 
 * Lines
 * Track
@@ -68,3 +88,40 @@ Hijos
 * Grid row
 * Grid column
 * Grid axis
+
+
+> Alineamiento contenedor:
+  * Justify-items
+  * align-items
+  * place-items
+  * Justify-content
+  * align-content
+  * place-content
+
+
+justify: inline axis
+align: block aixis
+
+.container{
+justify-items: start | end | center | stretch
+}
+
+.container{
+  align-items: start | end | center | stretch
+}
+
+place-content: <align-items>  <justify-items>
+
+
+Definiciones:
+
+La función CSS repeat() representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta.
+|
+En función Css minmax() el min representa el tamaño mínimo que va a tener cada uno de los elementos de la grid y el max nos indica el valor máximo de los elementos de la grid. Esto nos sirve para que el contenido se vea bien en determinados tamaños.
+|
+Con la función de auto-fit() ADAPTA las columnas DISPONIBLES ACTUALMENTE en el espacio expandiéndolas para que ocupen cualquier espacio disponible. El navegador hace eso después de LLENAR ese espacio adicional con columnas adicionales (como con el autocompletar) y luego colapsar las vacías.
+|
+Con la función de auto-fill() LLENA la fila con tantas columnas como pueda caber. Por lo tanto, crea columnas implícitas cada vez que cabe una nueva columna, porque está tratando de LLENAR la fila con tantas columnas como sea posible. Las columnas recién agregadas pueden estar vacías, pero seguirán ocupando un espacio designado en la fila.
+/************ Estas funciones con perfectas para el responsive design.*********/
+|
+La función fit-content() organiza un contenido en especifico el cual lo reserva y el resto seria auto.

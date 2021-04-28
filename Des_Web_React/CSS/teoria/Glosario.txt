@@ -127,3 +127,14 @@ Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:)
     *Organismos
     *Templates
     *Páginas
+
+----- Reseteo CSS -----
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+----- Herencia ----
+Usualmente con inherit, para heredar propiedades del padre.

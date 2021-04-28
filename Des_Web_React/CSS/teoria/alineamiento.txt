@@ -1,4 +1,4 @@
-Alineamiento con Flexbox:
+> Alineamiento con Flexbox:
 
 padres{
     display: flex
@@ -6,6 +6,16 @@ padres{
     align-items
 }
 
+> TIP: Hay una forma de hacer que CSS calcule el tamaño de un elemento (width o height, por ejemplo), restándole cierta cantidad.
+Por ejemplo:
+Imagina que quieres colocar 2 cajas dentro de una caja padre y quieres que cada una tome el 50% de ancho, pero que cada una tenga un margen a la izquierda de 10px. Si colocas width de 50% a cada caja y además le colocas margen, esto hará que las cajas queden una arriba de la otra, porque al agregarle 20px de espacio en márgenes, vas a hacer que ya no ajuste el 50% a cada caja. Para hacer que ambas cajas sigan tomando el 50% contando los márgenes, puedes hacer lo siguiente:
 
-Dibujos en CSS:
+.caja-hijo
+{
+	width: calc(50% - 20px);
+}
+
+
+
+> Dibujos en CSS:
 dibujartecss.musarte.dev

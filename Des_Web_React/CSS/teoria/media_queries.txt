@@ -1,0 +1,19 @@
+
+/*PARA CSS*/
+
+@media (min-width: 480px){
+    ....
+}
+
+@media (min-width: 768px){
+    ....
+}
+
+@media (min-width: 1024px){
+    ....
+}
+
+
+/*PARA HTML, buena practica*/
+
+<link href="tablet.css" rel="stylesheet" media="screen and (min-width: 768px)">

@@ -139,3 +139,18 @@ object-fit: cover; Para imagenes
 
 
 The state of UX in 2021: Pagina para estilo de UX
+
+
+Tips UI-UX:
+• Jerarquía
+• Contraste
+• Proximidad
+• Balance
+• Responsive design
+• Ilustraciones animadas
+• Garantizar performance
+• Micro interaciones
+• Realidad aumentada y realidad virtual
+• Neo morfismo (metodo de diseño)
+• Asymmetrical layouts
+• Storytelling

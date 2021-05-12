@@ -125,3 +125,17 @@ Con la función de auto-fill() LLENA la fila con tantas columnas como pueda cabe
 /************ Estas funciones con perfectas para el responsive design.*********/
 |
 La función fit-content() organiza un contenido en especifico el cual lo reserva y el resto seria auto.
+
+
+Función clamp: fija un valor entre un límite superior e inferior. permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos. Toma tres parámetros: un valor mínimo, un valor preferido y un valor máximo permitido.
+
+font-size: clamp(1rem, 2.5vw, 2rem); 
+
+
+aspect-ratio: 16 / 9:
+
+
+object-fit: cover; Para imagenes 
+
+
+The state of UX in 2021: Pagina para estilo de UX

@@ -138,3 +138,11 @@ Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:)
 
 ----- Herencia ----
 Usualmente con inherit, para heredar propiedades del padre.
+
+
+> BFC, Block Formatting Context, formato de contexto de bloque.
+Un mini Layout dentro del Layout. Con Overflow: auto. Hace que contenga elementos flotantes. También fixed.
+
+> Display: inline-block: Da un BFC en una caja en linea.
+
+> Display Flow-root; Da un BFC en una caja de bloque.

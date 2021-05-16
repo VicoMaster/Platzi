@@ -154,3 +154,8 @@ Tips UI-UX:
 • Neo morfismo (metodo de diseño)
 • Asymmetrical layouts
 • Storytelling
+
+
+> Css subgrid?
+> Css Massonry Layout
+> @supports (display: grid){}

@@ -28,3 +28,68 @@
     Valor tipo Objeto: se generan con corchetes, los cuales dentro ocupan una data que se transforma en objeto, ejem de sintaxis: { nombre: “Diego”}.
 
 > Scope: Es el alcance que tienen las variables.
+    >> global > local(funcion) > block > code
+
+> Hoisting: CUando las variables y las funciones se declaran antes de que se proceso cualquier tipo de código. El Hoisting solo pasa con versiones de Javascript antiguo, con EmnaScript 5 para abajo. Solo sirve con las palabras var y function. En versiones posteriores se manejan las variables CONST y LET.
+
+> Coerción: es la forma en la que podemos cambiar un tipo de valor a otro, existen dos tipos de coerción:
+    >> Coerción implícita = es cuando el lenguaje nos ayuda a cambiar el tipo de valor.
+    >> Coerción explicita = es cuando obligamos a que cambie el tipo de valor.
+
+> ParseInt vs Number
+    ParseInt: Analiza la cadena desde el primer dígito, hasta que encuentre algo que no sea dígito y devuelve lo que haya analizado.
+    Ejemplo:
+    parseInt(“123hui”) //123
+    Number: Busca convertir toda la cadena en un número, por lo que al encontrarse con un elemento que no sea diginto nos dara como resultado NAN.
+    Ejemplo:
+    Number(“123hui”) //NaN
+
+> Valores: Truthy y Falsy
+    Boolean(0); //false
+    Boolean(null); //false
+    Boolean(NaN); //false
+    Boolean(undefined); //false
+    Boolean(false); //false
+    Boolean(""); //false
+
+    Boolean(1); //true para 1 o cualquier número diferente de cero (0)
+    Boolean("a"); //true para cualquier caracter o espacio en blanco en el string
+    Boolean([]); //true aunque el array esté vacío
+    Boolean({}); //true aunque el objeto esté vacío
+    Boolean(function(){}); //Cualquier función es verdadera también
+
+> Operadores:
+    >> Operadores binarios:
+        3 + 2 //Suma
+        50 - 10 // Resta
+        10 * 20 //Multiplicación
+        20 / 2 //División
+        "Diego " + "De Granda" //concatenación de strings
+    >> Operadores unitarios:
+        !false //negación de la negación = true
+
+    >> Operadores de asignación:
+        var a = 1; //Asignamos un valor a la variable
+
+    >> Operadores para comparar:
+        3 == "3"; //Compara los valores y devuelve "true" en este caso
+        3 === "3"; //Compara y valida los tipos y valores. Devuelve "falso" en este caso
+        5 < 3 //Compara y valida si el 5 es menor a 3
+        5 > 3 //Compara y valida si el 5 es mayor a 3
+        5 <= 6 //Compara y valida si el 5 es menor o igual al 6
+        5 >= 6 //Compara y valida si el 5 es mayor o igual al 6
+        a && b //Valida si ambas variables son verdaderas para que se cumpla la condición
+        a || b //Aquí se cumple la condición si alguna de las dos variables es verdadera
+        var edad = 40
+        edad++ //Incrementa el valor en 1
+        edad += 2 //Incrementa el valor por 2
+
+> Arrays: pueden contener otros arrays, solo pueden contener datos del mismo tipo.
+
+> Bucles: pueden ejecutar un bloque de código varias veces. JavaScript admite diferentes tipos de bucles:
+    >> for - recorre un bloque de código varias veces
+    >> for/in - recorre las propiedades de un objeto
+    >> for/of - recorre los valores de un objeto iterable
+    >> while - recorre un bloque de código mientras se cumple una condición específica
+    >> do/while - también recorre un bloque de código mientras se cumple una condición específica
+

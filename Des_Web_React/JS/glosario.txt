@@ -93,3 +93,11 @@
     >> while - recorre un bloque de código mientras se cumple una condición específica
     >> do/while - también recorre un bloque de código mientras se cumple una condición específica
 
+> Diferencias entre LET vs VAR:
+let permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando. Lo anterior diferencia la expresión let de la palabra reservada var , la cual define una variable global o local en una función sin importar el ámbito del bloque.
+Cuando usamos let dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia a con var, cuyo alcance reside dentro de la función donde ha sido declarada la variable.
+
+
+> Convenciones
+    >> Para String comillas simples.
+    >> comilla invertida para interpolar variables para concatenar= alt + 96

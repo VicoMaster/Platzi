@@ -1,3 +1,17 @@
+// variables
+var nombre = 'Andres', apellido = 'Rivera';
+
+// Interpolar variables para concatenar
+
+var nombreCompleto = `${nombre} ${apellido}`;
+
+
+//Calculo valores decimales
+var precioDeVino = 200.3;
+var total = Math.round(precioDeVino * 100 * 3) / 100;
+var totalStr = total.toFixed(2); // para 2 decimales
+var total2 = parseFloat(totalStr);
+
 // Funciones Declarativas
 
 function miFuncion() {
@@ -88,7 +102,7 @@ var index = frutas.indexOf("Manzana");
 var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
 
 function saludarEstudiantes(alumno) {
-    console.log(`Hola, ${alumno}`);
+    console.log(`Hola, ${alumno}`); 
 }
 
 for (i = 0; i < frutas.length; i++) {

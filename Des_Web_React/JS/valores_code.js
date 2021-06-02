@@ -67,6 +67,13 @@ var resultado = function (user, cpu) {
 
 resultado(op1, op3) //el usuario GANO con Piedra``
 
+
+//validación en linea
+const MAYORIA_DE_EDAD = 18;
+return persona.edad >= MAYORIA_DE_EDAD
+
+
+
 // IF CORTO
 condition ? true : false;
 
@@ -132,6 +139,23 @@ var miAuto = {
     }
 }
 miAuto.marca
+
+function imprimirNombre({nombre}){
+    console.log(nombre.toUpperCase());
+}
+
+// Desestructurar objetos 
+// var nombre = persona.nombre - es iugal a:
+var { nombre } = persona //persona es un objeto
+//Este ejemplo es cuando se desea crear una variable con el mismo nombre de una clave
+
+
+function cumpleaños(persona){ // Esta funcion devuelve un objeto con el valor de edad incrementado
+    return {
+        ...persona,
+        edad: persona.edad + 1
+    }
+}
 
 // Funcion constructora
 function auto(marca, modelo, año) {

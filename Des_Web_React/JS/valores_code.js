@@ -24,6 +24,30 @@ var miFuncion = function (a, b) {
     return a + b;
 }
 
+// acortando funciones
+//funcion larga
+const esMayor = function (persona) {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
+//acortando
+const esMayor = (persona) => {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
+//acortando aun más cuando hay un solo parametro
+const esMayor = persona => {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
+// si la funcion solo retorna, se puede recortar
+const esMayor = persona => persona.edad >= MAYORIA_DE_EDAD;
+// desestructurando el objeto
+const esMayor = ({ edad }) => edad >= MAYORIA_DE_EDAD;
+
+
+
+
+// Arrow functions
+const permitirAcceso = ({ edad }) => !esMayorDeEdad({ edad }) ? console.log('Acceso denegado') : console.log('Adelante')
+
 //Scope
 var miNombre = "Andrés";
 
@@ -109,7 +133,7 @@ var index = frutas.indexOf("Manzana");
 var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
 
 function saludarEstudiantes(alumno) {
-    console.log(`Hola, ${alumno}`); 
+    console.log(`Hola, ${alumno}`);
 }
 
 for (i = 0; i < frutas.length; i++) {
@@ -120,6 +144,8 @@ for (i = 0; i < frutas.length; i++) {
 for (var alumno of estudiantes) {
     saludarEstudiantes(alumno);
 }
+
+
 
 // while
 var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
@@ -140,7 +166,7 @@ var miAuto = {
 }
 miAuto.marca
 
-function imprimirNombre({nombre}){
+function imprimirNombre({ nombre }) {
     console.log(nombre.toUpperCase());
 }
 
@@ -150,7 +176,7 @@ var { nombre } = persona //persona es un objeto
 //Este ejemplo es cuando se desea crear una variable con el mismo nombre de una clave
 
 
-function cumpleaños(persona){ // Esta funcion devuelve un objeto con el valor de edad incrementado
+function cumpleaños(persona) { // Esta funcion devuelve un objeto con el valor de edad incrementado
     return {
         ...persona,
         edad: persona.edad + 1
@@ -167,30 +193,46 @@ var autoNuevo = new auto("Tesla", "Model 3", 2020);
 
 // Metodo recorrido Arrays
 var articulos = [
-	{ nombre: 'Bici', precio: 1000 },
-	{ nombre: 'Laptop', precio: 1500 },
-	{ nombre: 'Libro', precio: 2000 },
-	{ nombre: 'TV', precio: 100 },
-	{ nombre: 'Celular', precio: 70 },
-	{ nombre: 'Audifonos', precio: 30000 },
+    { nombre: 'Bici', precio: 1000 },
+    { nombre: 'Laptop', precio: 1500 },
+    { nombre: 'Libro', precio: 2000 },
+    { nombre: 'TV', precio: 100 },
+    { nombre: 'Celular', precio: 70 },
+    { nombre: 'Audifonos', precio: 30000 },
 ];
 
-var articulosFiltrador = articulos.filter(function(articulo){
+var articulosFiltrador = articulos.filter(function (articulo) {
     return articulo.precio <= 500;
 });
 
-var nombreArticulos = articulos.map(function(articulo) {
-	return articulo.nombre;
+var nombreArticulos = articulos.map(function (articulo) {
+    return articulo.nombre;
 });
 
-var encuentraArticulo = articulos.find(function(articulo){
+var encuentraArticulo = articulos.find(function (articulo) {
     return articulo.nombre === "Laptop";
 });
 
-articulos.forEach(function(articulo){
+articulos.forEach(function (articulo) {
     console.log(articulo.nombre);
 });
 
-var articulosBaratos = articulos.some(function(articulo){
+var articulosBaratos = articulos.some(function (articulo) {
     return articulo.costo <= 700;
 });
+
+// Crar nuevo array
+//version completa recortada
+const pasarAlturaCMS = persona => {
+    return {
+        ...persona,
+        altura: persona.altura * 100
+    }
+}
+
+//version corta
+const pasarAlturaCMS = persona => ({ ...persona, altura: persona.altura * 100 });
+
+//Reducir un array a un valor
+const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros;
+var totalDeLibros = personas.reduce(reducer, 0); //Suma todos los libros en los objetos en el array

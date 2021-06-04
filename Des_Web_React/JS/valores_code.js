@@ -236,3 +236,25 @@ const pasarAlturaCMS = persona => ({ ...persona, altura: persona.altura * 100 })
 //Reducir un array a un valor
 const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros;
 var totalDeLibros = personas.reduce(reducer, 0); //Suma todos los libros en los objetos en el array
+
+
+//Clases en JS
+function Persona(nombre, apellido){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    //retorna = return this
+}
+//agregar una función al prototipo persona
+Persona.prototype.saludar = function (){
+    console.log(`hola, me llamo ${this.nombre} ${this.apellido}`);
+}
+var sacha = new Persona('Sacha', 'Lifszync');
+sacha.saludar();
+//Función interna que devuelve un boolean
+Persona.prototype.SoyAlto = function () {
+    return this.altura > 1.8;
+}
+sacha.SoyAlto(); //return false
+
+//Prototipo
+

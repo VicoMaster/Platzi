@@ -94,8 +94,15 @@
     >> do/while - también recorre un bloque de código mientras se cumple una condición específica
 
 > Diferencias entre LET vs VAR:
-let permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando. Lo anterior diferencia la expresión let de la palabra reservada var , la cual define una variable global o local en una función sin importar el ámbito del bloque.
-Cuando usamos let dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia a con var, cuyo alcance reside dentro de la función donde ha sido declarada la variable.
+    let permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando. Lo anterior diferencia la expresión let de la palabra reservada var , la cual define una variable global o local en una función sin importar el ámbito del bloque.
+    Cuando usamos let dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia a con var, cuyo alcance reside dentro de la función donde ha sido declarada la variable.
+
+
+> Prototipo:
+    El prototipo es un objeto más de JS , a partir de que lo modifiquemos, éste va a quedar modificado.
+    Es de mucha importancia donde colocamos las funciones que va a tener el prototipo . Estos se deben de colocar juntos, ya que con ellos se va creando el prototipo del objeto, y deseamos que tenga juntas todas sus funciones.
+    Por ello definimos los prototipos arriba, y los utilizamos a lo largo del código.
+    NOTA: Cuando tenemos un error en JS, éste no se sigue ejecutando, se corta ahí la ejecución del código.
 
 
 > Convenciones

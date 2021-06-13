@@ -108,3 +108,19 @@
 > Convenciones
     >> Para String comillas simples.
     >> comilla invertida para interpolar variables para concatenar= alt + 96
+
+
+> Callbacks: Es una función que se ejecutara en algun futuro, pero no sabemos cuando. Cuando termine el Request se va a llamar. Si el request no termina nunca se ejecutara. Se llaman funciones en serie, una sincronia en la respuesta.
+
+> Promesas:
+Tenemos que pensar las promesas como valores que aún no conocemos. Es la promesa de que ahí va a haber un valor cuando una acción asíncrona suceda y se devuelva.
+Las promesas tienen 3 estados y son como cualquier otro objeto de javascript:
+El primero de los estados es ‘pending’. Es el estado cuando las creamos.
+Si se resuelve exitosamente pasa al estado ‘fulfilled’.
+Si ocurre algún error y no se resuelve pasa al estado de ‘rejected’.
+Las promesas pueden no ser asíncronas también.
+Para obtener el valor de la resolución de la promesa llamamos a la función _.then(val =>) _a la que le vamos a pasar como parámetro otra función en la que el primer parámetro será el valor que esperábamos.
+Si sucede algún error agregamos el método .catch(err=>) al que se le asigna una función también como parámetro que va a recibir el error.
+
+> Async-await: lo último en asincronismo
+Async-await es la manera más sencilla y clara de realizar tareas asíncronas. Se parece mucho a la forma de escribir código hace unos años, de manera secuencial, desde arriba hacia abajo.

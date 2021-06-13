@@ -234,18 +234,18 @@ const pasarAlturaCMS = persona => {
 const pasarAlturaCMS = persona => ({ ...persona, altura: persona.altura * 100 });
 
 //Reducir un array a un valor
-const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros;
+const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros;
 var totalDeLibros = personas.reduce(reducer, 0); //Suma todos los libros en los objetos en el array
 
 
 //Clases en JS
-function Persona(nombre, apellido){
+function Persona(nombre, apellido) {
     this.nombre = nombre;
     this.apellido = apellido;
     //retorna = return this
 }
 //agregar una función al prototipo persona
-Persona.prototype.saludar = function (){
+Persona.prototype.saludar = function () {
     console.log(`hola, me llamo ${this.nombre} ${this.apellido}`);
 }
 var sacha = new Persona('Sacha', 'Lifszync');
@@ -256,5 +256,193 @@ Persona.prototype.SoyAlto = function () {
 }
 sacha.SoyAlto(); //return false
 
-//Prototipo
+//HERENCIA PROTOTIPAL:
+//Prototipo = clases en javascript, de la manera antigua
+function heredaDe(prototipoHijo, prototipoPadre) {
+    var fn = function () { } // funcion que no hace nada
+    fn.prototype = prototipoPadre.prototype;
+    prototipoHijo.prototype = new fn;
+    prototipoHijo.prototype.constructor = prototipoHijo;
+}
+//EJEMPLO PRACTICO PROTOTIPO
+function Desarrollador(nombre, apellido) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+}
+heredaDe(Desarrollador, Persona); // se pone antes de la función desarrollador para pisarlo.
+Desarrollador.prototype.saludar = function () {
+    console.log(`hola, me llamo ${this.nombre} ${this.apellido} y soy desarrollador.`)
+}
 
+//ECMA-2015 Clases
+class Persona {
+    constructor(nombre, apellido, altura) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.altura = altura;
+    }
+
+    saludar() {
+        console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
+    }
+
+    soyAlto() {
+        return this.altura > 1.8;
+    }
+}
+//herencia con ecma
+class Desarrollador extends Persona {
+    constructor(nombre, apellido, altura) {
+        super(nombre, apellido, altura);
+    }
+    //recibe una función como parametro
+    saludar(fn) {
+        var { nombre, apellido } = this;
+        console.log(`hola, me llamo ${nombre} ${apellido} y soy desarrollador.`)
+        if (fn) {
+            fn(nombre, apellido, true);
+        }
+    }
+}
+
+//Asincronismo y callbacks (con JQuery para la petición)
+function obtenerPersonaje(id, callback) {
+    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`;
+
+    $.get(url, opts, function (persona) {
+        console.log(`Hola, yo soy ${persona.name}`)
+
+        if (callback) {
+            callback();
+        }
+    })
+}
+//callbacksheall
+obtenerPersonaje(1, function () {
+    obtenerPersonaje(2, function () {
+        obtenerPersonaje(3, function () {
+            obtenerPersonaje(4, function () {
+                obtenerPersonaje(5, function () {
+                    obtenerPersonaje(6, function () {
+                        obtenerPersonaje(7);
+                    });
+                });
+            });
+        });
+    });
+});
+
+//Promesas
+//Declarar una promesa:
+esto = new Promise( function( resolve, reject ) {
+    //...
+}).then( valor => {
+    //...
+}).catch( err => {
+    //...
+})
+//ejemplo de Promesa
+const API_URL = 'https://swapi.co/api/'
+const PEOPLE_URL = 'people/:id'
+const opts = { crossDomain: true }
+function obtenerPersonaje(id) {
+    return new Promise((resolve, reject) => {
+        const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
+        $//código jquery
+            .get(url, opts, function (data) {
+                resolve(data)
+            })
+            .fail(() => reject(id))
+    })
+}
+function onError(id) {
+    console.log(`ERORRRRRRR!!!!!!!!!!! No se pudo obtener el personaje con id = ${id}.`)
+}
+obtenerPersonaje(1)
+    .then(function (personaje) {
+        console.log(personaje.name)
+    })
+    .catch(onError)
+
+
+// Promesas encadenadas 
+const API_URL = 'https://swapi.co/api/'
+const PEOPLE_URL = 'people/:id'
+const opts = {crossDomain:true}
+
+function obtenerPersonaje(id){
+    return new Promise((resolve, reject)=>{
+        const url = `${API_URL}${PEOPLE_URL.replace(':id',id)}`
+        $
+        .get(url, opts, function(data){
+            resolve(data)
+        })
+        .fail(()=> reject(id))
+    })
+}
+
+function onError(id){
+    console.log(`Sucedio un error al obtener el personaje ${id}`)
+}
+// los request se hacen en serie y no paralelo
+obtenerPersonaje(1)
+    .then( personaje => {
+        console.log(`El personaje 1 es ${personaje.name}`)
+        return obtenerPersonaje(2)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 2 es ${personaje.name}`)
+        return obtenerPersonaje(3)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 3 es ${personaje.name}`)
+        return obtenerPersonaje(4)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 4 es ${personaje.name}`)
+        return obtenerPersonaje(5)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 5 es ${personaje.name}`)
+        return obtenerPersonaje(6)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 6 es ${personaje.name}`)
+        return obtenerPersonaje(7)
+    })
+    .then(personaje =>{
+        console.log(`El personaje 7 es ${personaje.name}`)
+    })
+    .catch(onError)
+
+//Crear promesas con un array y .map
+var ids = [1, 2, 3, 4, 5, 6, 7]
+var promesas = ids.map(function(id){
+    return obtenerPersonaje(id)
+})
+//Expresado en arrow function
+var ids = [1, 2, 3, 4, 5, 6, 7]
+var promesas = ids.map( id => obtenerPersonaje(id) )
+//Promesas en paralelo
+Promise
+    .all(promesas)
+    .then( personajes => console.log(personajes))
+    .catch(onError)
+
+//Async-await
+async function obtenerPersonajes() {
+    var ids = []
+    for (let i = 1; i <= 10; i++) {
+        ids.push(i)
+    }
+    var promesas = ids.map( id => obtenerPersonaje(id) )
+
+    try {
+        var personajes = await Promise.all(promesas)
+        console.log(personajes)
+    } catch (id) {
+        onError(id)
+    }
+}
+
+obtenerPersonajes()

@@ -124,3 +124,7 @@ Si sucede algún error agregamos el método .catch(err=>) al que se le asigna un
 
 > Async-await: lo último en asincronismo
 Async-await es la manera más sencilla y clara de realizar tareas asíncronas. Se parece mucho a la forma de escribir código hace unos años, de manera secuencial, desde arriba hacia abajo.
+
+
+> Memoización:
+Es una técnica de programación que nos permite ahorrar cómputo o procesamiento en JavaScript, al ir almacenando el resultado invariable de una función para que no sea necesario volver a ejecutar todas las instrucciones de nuevo, cuando se vuelva a llamar con los mismos parámetros. Es similar a usar memoria cache.

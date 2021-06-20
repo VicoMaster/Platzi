@@ -155,6 +155,51 @@ while (estudiantes.length > 0) {
 }
 
 
+//Recursividad: Nos sirve para iterar elementos sin usar ciclos for o while. 
+//Sirve para hacer más simples los códigos confusos o complejos con usos de ciclos.
+//En cada llamada de la función se genera una nueva tarea dentro del Stack, luego cada una se libera sumando o haciendo la operación indicada con el stack anterior.
+//El caso base es donde se terminará la recursividad o el bucle de instancias
+const conteoRegresivo = (a) => {
+    if (a < 0) return  // el return termina la ejecución
+    console.log(a)
+    return conteoRegresivo(a - 1)
+}
+//ejemplo de recursividad con una aplicación de un llamado a una api con metodo http, usando librería axios.
+const axios = require('axios')
+const llamarApi = async (url, llamados = 0) => {
+    try {
+        const {data} = await axios.get(url)
+        console.log(data);
+        return data
+    } catch (e) {
+        if (llamados > 5) {
+            return llamarApi(url, llamados + 1)
+        }
+    }
+}
+llamarApi('https://jsonplaceholder.typicode.com/users');
+//ejemplo de recursividad con factorial
+function factorial(n){
+    if (n === 1){
+        return 1;
+    }
+    return n * factorial( n - 1)
+}
+//ejemplo recursividad con factorial guardando el resultado en cache (creando variable en objeto window) para ahorrar computo "Memoizando"
+function factorial_memoizando(n){
+    if(!this.cache){
+        this.cache = {}
+    }
+    if(this.cache[n]){
+        return this.cache[n]
+    }
+    if(n ===1){
+        return 1
+    }
+   this.cache[n] = n * factorial(n-1)
+   return this.cache[n]
+}
+
 //Objeto   clave-valor
 var miAuto = {
     marca: "Toyota",
@@ -468,3 +513,6 @@ this.colores = {
     verde : verde
     */
 }
+
+
+//Manejando Fechas

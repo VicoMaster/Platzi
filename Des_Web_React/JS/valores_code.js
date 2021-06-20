@@ -516,3 +516,72 @@ this.colores = {
 
 
 //Manejando Fechas
+function diasEntreFechas(fecha1,fecha2){
+    const unDia = 1000*60*60*24
+    const diferencia = Math.abs(fecha1- fecha2)
+    return Math.floor(diferencia/unDia)
+}
+const hoy= new Date()
+const nacimiento =new Date(1996,2,14)
+/** 
+También existen métodos para obtener un valor de la fecha en específico. Estos métodos son:
+getFullYear()
+getMonth()
+getDate()
+getHours()
+getMinutes()
+getSeconds()
+getMilliseconds()
+getTime()
+getDay()
+Date.now()
+ **/
+
+// Closures
+const miContador = (function() {
+    let _contador = 0;
+
+    function incrementar(){
+        return _contador++;
+    }
+
+    function decrementar(){
+        return _contador--;
+    }
+
+    function valor(){
+        return _contador;
+    }
+
+    return {
+        incrementar,
+        decrementar,
+        valor
+    }
+})();
+miContador.incrementar();
+miContador.valor();
+
+//blind
+const pablo = {
+	nombre: 'Pablo',
+	apellido: 'Andrés',
+}
+const mariela = {
+	nombre: 'Mariela',
+	apellido: 'Riesnik',
+}
+
+function saludar() {
+	console.log(`Hola, mi nombre es ${this.nombre}`)
+}
+const saludarAPablo = saludar.bind(pablo)
+const saludarAMariela = saludar.bind(mariela)
+saludarAPablo()
+// Hola, mi nombre es Pablo
+saludarAMariela()
+// Hola, mi nombre es Mariela
+saludar.call(pablo, 'Hola cheeee!!')
+// Hola cheeee!!, mi nombre es Pablo
+saludar.apply(pablo, ['Hola mi querido'])
+// Hola mi querido, mi nombre es Pablo

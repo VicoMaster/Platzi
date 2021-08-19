@@ -130,3 +130,5 @@ Async-await es la manera más sencilla y clara de realizar tareas asíncronas. S
 Es una técnica de programación que nos permite ahorrar cómputo o procesamiento en JavaScript, al ir almacenando el resultado invariable de una función para que no sea necesario volver a ejecutar todas las instrucciones de nuevo, cuando se vuelva a llamar con los mismos parámetros. Es similar a usar memoria cache.
 
 > Closures: Clausulas o funciones de cierres son un patron muy usado en JS, esta dentro de lo que se conoce en las Good parts. Es una función que encapsula una serie de variables y definiciones locales que unicamente seran accesibles si son devueltas con el operador return. Permite manejar estructuras de datos privadas, que no son accesibles.
+
+> Generators: Son una alternativa poderosa que permiten definir un algoritmo iterativo al escribir una sola funcion que puede mantener su propio estado.

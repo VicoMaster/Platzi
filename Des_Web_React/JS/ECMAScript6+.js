@@ -42,23 +42,6 @@ const listOfname4 = name => { //Cuando solo se pasa un solo parametro
 
 const square = num => num * num;  //aginaciones directamente sin llaves
 
-//Promesas
-//CREACION:
-const helloPromise = () => {
-    return new Promise((resolve, reject) => {
-        if (true){
-            resolve('Hey!');
-        }else {
-            reject('ups!!');
-        }
-    });
-}
-
-//Ejecutar promesa con validación de la respuesta:
-helloPromise()
-    .then(response => console.log(response))
-    .catch(error => console.log(error));
-
 
 //Clases
 class calculator {
@@ -150,3 +133,120 @@ const string = 'hello';
 console.log(string.padStart(7,'hi'));
 console.log(string.padEnd(12,'-----'));
 console.log('food'.padEnd(12,'  -----'));
+
+
+//Promesas
+//CREACION:
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true){
+            resolve('Hey!');
+        }else {
+            reject('ups!!');
+        }
+    });
+}
+//otra promesa
+const helloWorld = () => () => {
+    return new Promise((resolve, reject) => {
+        (true)
+        ? setTimeout(() => resolve('Hello World'), 3000)
+        :reject(new error('Test Error')) 
+    }) 
+}
+    
+//Ejecutar promesa con validación de la respuesta:
+helloPromise()
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+
+
+//Async Await
+//Se llama una promesa ya creada
+const helloAsync = async () => {
+    const hello = await helloWorld();
+    console.log(hello);
+}
+helloAsync();
+//Manejo de Async Await con try-catch
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+anotherFunction();
+
+
+//ECMAScript 9
+//Propiedades de propagación
+const obj = {
+    name: 'oscar',
+    age:'32',
+    country: 'MX'
+}
+
+let {name, ...cualquier_cosa} = obj;
+console.log(name,cualquier_cosa);
+
+//unión de objetos
+const obj1 = {
+    ...obj,
+    country: 'CO'
+}
+console.log(obj1)
+
+//Promesas con Finally
+const helloWorld = () => {
+    return new Promise((resolve, reject) => {
+        (true)
+        ? setTimeout(()=> resolve('Hello World'),3000)
+        : reject(new Error('Test Error'))
+    });
+}
+helloWorld()
+    .then(response =>console.log(response))
+    .catch(error => console.log(error))
+    .finally(() => console.log('Finalizo'));
+
+//REGEX - EXPRESIONES REGULARES:
+const regexData = /([0-9]{4})-([0-9]{2})-([0-9]{2})/
+const match = regexData.exec('2018-04-2020');
+const year = match[1];
+const month = match[2];
+const day = match[3];
+
+console.log(year, month, day);
+console.log(match);
+
+//ECMAScript 10
+//array.flat
+let array = [1,2,3, [1,2,3, [1,2,3]]];
+console.log(array.flat(2));
+
+//array.flatMap
+let array = [1,2,3,4,5];
+console.log(array.flatMap(value => [value, value * 2]));
+
+//string.trimStart()
+//string.trimEnd()
+
+//Catch opcional
+try {
+    
+} catch {
+    error   
+}
+
+//Entries
+let entries = [["name", "oscar"], ["age", 32]];
+console.log(Object.fromEntries(entries));
+
+//Symbol
+let mySymbl = `Esta es la descripción de My Symbol`;
+let symbl = Symbol(mySymbl);
+console.log(symbl.description);
+

@@ -250,3 +250,5 @@ let mySymbl = `Esta es la descripción de My Symbol`;
 let symbl = Symbol(mySymbl);
 console.log(symbl.description);
 
+
+////ECMAScript 11 2020?

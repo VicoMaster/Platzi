@@ -562,6 +562,69 @@ const miContador = (function() {
 miContador.incrementar();
 miContador.valor();
 
+//otro ejemplo Closures
+const moneyBox = () => {
+    var saveCoins = 0;
+    const countCoins = (coins) => {
+        saveCoins += coins;
+        console.log(`MoneyBox: $${saveCoins}`);
+    }
+    return countCoins;
+}
+let myMoneyBox = moneyBox();
+myMoneyBox(4);
+myMoneyBox(6);
+myMoneyBox(10);
+
+//otro más de closures
+const buildCount = (i)=>{
+    let count = i;
+    const displayCount = () =>{
+        console.log(count++);
+    }
+    return displayCount;
+};
+const myCount = buildCount(1);
+myCount();
+myCount();
+myCount();
+
+//clousure y variables privadas
+const person = () => {
+    let saveName = "Name"; //esta es la var privada
+    return {
+      getName: () => saveName,
+      setName: (name) => {
+        saveName = name;
+      },
+    };
+  };
+  
+  const newPerson = person();
+  console.log(newPerson.getName());
+  newPerson.setName('Edward');
+  console.log(newPerson.getName());
+
+//get y set en closures
+const person = () => {
+    let name = 'Name'
+  
+    return {
+      get name () {
+        return name
+      },
+  
+      set name (value) {
+        name = value
+      }
+    }
+}
+
+const newPerson = person()
+console.log(newPerson.name)
+newPerson.name = 'Jousmo'
+console.log(newPerson.name)
+
 //blind
 const pablo = {
 	nombre: 'Pablo',

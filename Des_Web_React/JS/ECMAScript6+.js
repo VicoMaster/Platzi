@@ -252,3 +252,23 @@ console.log(symbl.description);
 
 
 ////ECMAScript 11 2020?
+//Dynamic import()
+if (true) {
+    const module = await import('./module.js');
+    module.function();
+}
+
+//Optional Chaining
+const nameLength = db?.user?.name?.length;
+
+//GlobalThis
+const getGlobalThis = () => {
+    if (typeof globalThis !== 'undefined') return globalThis;
+}
+const theGlobalThis = getGlobalThis;
+
+//BigInt
+const max = Number.MAX_SAFE_INTEGER; //para trabajar con más de 16 digitos
+
+//Promise.allSettled
+//TODO... Por entender ~

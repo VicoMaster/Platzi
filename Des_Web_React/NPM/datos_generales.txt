@@ -8,3 +8,55 @@ npm install nombre_del_package --save
 // La bandera de --save se utiliza para decirle a node que es un packete esencial para producción
 // La bandera de --save-dev se utiliza para decirle a node que es un packete solo para desarrollo
 // agregar la carpeta node-modules al archivo .gitignore para no mandarla al repositorio
+
+> instalar paquetes de forma global
+npm install -g nodemon
+// nodemon nos ayuda a que algunos paquetes instalados de forma global solo afecten ciertos proyectos
+
+> Buscar paquetes instalados en node de forma global con profundidad de 0 que es igual a todo
+npm list -g --depth 0
+
+> Instalar de forma opcional un paquetes
+npm install nombre_del_package -O
+
+>simular la instalación de un paquete para saber que nos puede resultar
+npm install react --dry-run
+
+> forzar instalar package
+npm install nombre_del_package -f
+
+> Instalar todo nuevamente dependiento del archivo JSON en la parte dependences
+npm install
+
+> instalar una versión de package especifica
+npm install nombre_del_package@0.15.1
+
+> Saber si hay actualizaciones para los paquetes instalados
+npm outdate
+// con la flag -dd es para ver el output más detallado
+
+> actualizar todos los paquetes
+npm update
+
+> actualizar un paquete determinado
+npm install nombre_del_package@latest
+
+> Desinstalar un paquete
+npm uninstall nombre_del_package
+// con la flag --no-save se desinstala el paquete sin sacarlo del JSON 
+
+
+> eliminar el cache de node en el sistema
+npm cache clean --force
+
+> Instalar un modulo/package de node creado "se debe estar dentro de la carpeta del modulo" 
+npm link
+
+> Instalar nuevamente un modulo o por primera vez desde la ruta ... "se debe apuntar a la carpeta bin"
+npm install -g /.../bin/script.js
+
+> Loggearse con datos de plataforma NPM
+npm adduser
+
+> publicar paquete
+npm publish

@@ -1,0 +1,10 @@
+> Para cambiar datos por defecto en NPM:
+npm set init.author.email "androsfera@ghotmail.com"
+npm set init.author.name "Andrés Rivera"
+npm set init.license "MIT"
+
+> Instalar paquetes en Node
+npm install nombre_del_package --save
+// La bandera de --save se utiliza para decirle a node que es un packete esencial para producción
+// La bandera de --save-dev se utiliza para decirle a node que es un packete solo para desarrollo
+// agregar la carpeta node-modules al archivo .gitignore para no mandarla al repositorio

@@ -1,0 +1,18 @@
+> Perimetro de un cuadrado:
+El perímetro del cuadro es la suma de la longitud de cada lado del cuadrado: L* 4 = cm
+
+> Area del cuadrado (2 dimensiones)
+L * L = cm2
+
+> Perimetro de un triangulo:
+L + L + L = cm
+
+> Área del triangulo:
+(B * A) / 2  = cm2
+
+> Perimetro del circulo (circunferencia):
+Diametro * PI
+
+> Área del círculo:
+Radio2 * PI  = cm2
+ 

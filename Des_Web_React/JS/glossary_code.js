@@ -282,6 +282,65 @@ const pasarAlturaCMS = persona => ({ ...persona, altura: persona.altura * 100 })
 const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros;
 var totalDeLibros = personas.reduce(reducer, 0); //Suma todos los libros en los objetos en el array
 
+//reduce()
+//arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])
+/**
+La función reductora recibe cuatro argumentos:
+
+Acumulador (acc)
+Valor Actual (cur)
+Índice Actual (idx)
+Array (src)
+ */
+const array1 = [1, 2, 3, 4, 5, 6, 7];
+const reducer = (accumulator, currentValue) => {
+    console.log(`${accumulator} | ${currentValue}`)
+    return accumulator + currentValue;
+}
+
+console.log(array1.reduce(reducer,2));
+
+
+// .sort()
+/**
+ Para comparar números en lugar de strings, la función de comparación puede simplemente restar b de a. La siguiente función ordena el array de modo ascendente:
+ */
+var arr = [ 40, 1, 5, 200 ];
+function comparar ( a, b ){ return a - b; }
+arr.sort( comparar );  // [ 1, 5, 40, 200 ]
+
+/** El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. 
+ * .map  SINTAXIS
+    var nuevo_array = arr.map(function callback(currentValue, index, array) {
+        // Elemento devuelto de nuevo_array
+    }[, thisArg])
+ * callback: Función que producirá un elemento del nuevo array, recibe tres argumentos:
+ * currentValue: El elemento actual del array que se está procesando.
+ * index: El índice del elemento actual dentro del array.
+ * array: El array sobre el que se llama map.
+ * thisArg: Opcional. Valor a usar como this al ejecutar callback.
+ */
+const lista1 = [6,4,9,1, 2, 3, 1, 2, 3, 4, 2, 2, 2, 1, 6];
+const lista1Count = {};
+lista1.map(
+    function (elemento) {
+        if (lista1Count[elemento]) {
+            lista1Count[elemento] += 1;
+        } else {
+            lista1Count[elemento] = 1;
+        }
+    }
+);
+console.log(lista1Count);
+const lista1Array = Object.entries(lista1Count).sort(
+    function (elementoA, elementoB) {
+      return elementoA[1] - elementoB[1];
+    }
+  );
+  
+const moda = lista1Array[lista1Array.length - 1];
+console.log(moda);
+
 
 //Clases en JS
 function Persona(nombre, apellido) {

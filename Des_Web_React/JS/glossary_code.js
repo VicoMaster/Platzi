@@ -341,6 +341,12 @@ const lista1Array = Object.entries(lista1Count).sort(
 const moda = lista1Array[lista1Array.length - 1];
 console.log(moda);
 
+//splice
+//Recibe 2 parametros, donde inicia y cuantas secciones rescatará
+const arrayEjemplo = [0,2,3,4,5,6,7,8,9,10];
+const ejemplo = arrayEjemplo.splice(5,2); //[6,7]
+console.log(ejemplo);
+
 
 //Clases en JS
 function Persona(nombre, apellido) {

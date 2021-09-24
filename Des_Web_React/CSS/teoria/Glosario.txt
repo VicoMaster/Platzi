@@ -101,7 +101,7 @@ Metodologías para trabajar con CSS (OOCSS, BEM, SMACSS, ITCSS y Atomic Design:)
     }
 
     /*METODO RAPIDO*/
-    .buttonñ{}
+    .button{}
     .button--primary{}
     .button--secondary{}
     <button class="button button--primary"> Primary</button>

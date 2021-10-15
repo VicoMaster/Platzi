@@ -1,0 +1,8 @@
+> Propiedades animables: Que sus valores cambian gradualmente durante un periodo de tiempo determinado.
+> Pagina de curvas de velocidad (funciones de suavizado) : https://cubic-bezier.com/  o  https://easings.net/
+
+> Transformaciones:
+    - transform, transform-origin, transform.style, perspective, perspective-origin, backface-visibility
+
+> Transiciones transition: [property] [duration] [timing-function] [delay]: 
+    - transition, transition-property, transition-duration, transition-timing-function (opcional), transition-delay (opcional)

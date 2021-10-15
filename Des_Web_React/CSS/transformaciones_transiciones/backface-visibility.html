@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backface Visibility</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            position: relative;
+            transition: all 1s ease;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .face {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-family: 'Lobster', cursive;
+        }
+
+        .face.front {
+            /*Se deben tener las clases para que se apliquen los estilos*/
+            background: pink;
+        }
+
+        .face.back {
+            background: papayawhip;
+            transform: rotateY(180deg);  /*Hace de propiedad Z-index para el fondo*/
+        }
+
+        body {
+            background-color: #222;
+            perspective: 1000px;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="face front">FRENTE</div>
+        <div class="face back">BACK</div>
+    </div>
+</body>
+
+</html>

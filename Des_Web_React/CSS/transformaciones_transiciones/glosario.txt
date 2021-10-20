@@ -6,3 +6,10 @@
 
 > Transiciones transition: [property] [duration] [timing-function] [delay]: 
     - transition, transition-property, transition-duration, transition-timing-function (opcional), transition-delay (opcional)
+
+> Funciones de velocidad:
+    - linear: El elemento se mueve a una aceleración constante.
+    - ease: Es el valor predeterminado si no se especifica la propiedad transition-timing-function. El elemento acelera inicialmente pero presenta mucha desaceleración.
+    - ease-in: El elemento empieza lento pero termina rápido.
+    - ease-out: El elemento empieza rápido pero termina lento.
+    - ease-in-out: Es la combinación de ease-in y ease-out: El elemento empieza lento, a medida que avanza va acelerándose, pero termina lento.

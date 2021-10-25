@@ -27,85 +27,449 @@
         }
 
         .phone {
-            position: relative;
-            border: 8px solid var(--border-phone);
+            background: var(--background-phone);
             border-radius: 40px;
+            border: 8px solid var(--border-phone);
+            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
+                var(--shadow-phone-sides) var(--color-shadow-sides);
             height: 80%;
             min-height: 550px;
             min-width: 350px;
+            overflow: hidden;
+            position: relative;
             width: 25%;
-            background: var(--background-phone);
-            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
-                var(--shadow-phone-sides) var(--color-shadow-sides);
         }
 
         .layer {
             position: absolute;
         }
 
-        .layer-1 { /*Rabbit-1*/
-            z-index: 1;
-            height: 80%;
-            width: 30%;
-            background-color: white;
+        /*Rabbit-1*/
+        .layer-1 {
+            border-radius: 15px;
             bottom: 0;
+            height: 80%;
             right: 60px;
-        }
-        .layer-2 { /*Rabbit-2*/
-            z-index: 2;
-            height: 80%;
             width: 30%;
-            background-color: white;
-            bottom: 0;
-            left: 60px;
+            z-index: 1;
         }
-        .layer-3 { /*mountain-1*/
+
+        /*Rabbit-2*/
+        .layer-2 {
+            border-radius: 15px;
+            bottom: 0;
+            height: 80%;
+            left: 60px;
+            width: 30%;
+            z-index: 2;
+        }
+
+        /*mountain-1*/
+        .layer-3 {
+            overflow: hidden;
             z-index: 3;
             width: 80%;
-            height: 65%;
-            background: wheat;
+            height: 70%;
+            background: #BA6D4F;
             left: 0;
             right: 0;
             bottom: 0px;
             margin: 0 auto;
+            border-radius: 30px;
+            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
+                var(--shadow-phone-sides) var(--color-shadow-sides);
         }
+
+        /*Rabbit-3*/
         .layer-4 {
             z-index: 4;
+            height: 55%;
+            width: 30%;
+            bottom: 0;
+            left: 25px;
+            border-radius: 15px;
         }
+
+        /*mountain-2*/
         .layer-5 {
+            overflow: hidden;
             z-index: 5;
+            border: 1px solid var(--color-shadow-sides);
+            width: 80%;
+            height: 44%;
+            background: #BA6D4F;
+            left: 0;
+            bottom: 0px;
+            margin: 0 auto;
+            border-radius: 30px;
+            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
+                var(--shadow-phone-sides) var(--color-shadow-sides);
         }
+
+        /*Rabbit-4*/
         .layer-6 {
             z-index: 6;
+            height: 35%;
+            width: 30%;
+            bottom: 0;
+            right: 25px;
+            border-radius: 15px;
         }
+
+        /*mountain-3*/
         .layer-7 {
+            overflow: hidden;
             z-index: 7;
+            border: 1px solid var(--color-shadow-sides);
+            width: 60%;
+            height: 25%;
+            background: #BA6D4F;
+            right: 0;
+            bottom: 0px;
+            margin: 0 auto;
+            border-radius: 30px;
+            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
+                var(--shadow-phone-sides) var(--color-shadow-sides);
         }
+
+        /*mountain-green*/
         .layer-8 {
             z-index: 8;
+            width: 60%;
+            height: 15%;
+            background: #2E8A57;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: 0 auto;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            box-shadow: var(--shadow-phone-botton) var(--color-shadow-botton),
+                var(--shadow-phone-sides) var(--color-shadow-sides);
         }
+
+        /*cloud-papayawhip -left*/
         .layer-9 {
             z-index: 9;
+            width: 36%;
+            height: 17%;
+            left: 0;
+            bottom: -3.5%;
+            margin: 0 auto;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 25%;
         }
+
+        /*cloud-papayawhip -right*/
         .layer-10 {
             z-index: 10;
+            width: 36%;
+            height: 17%;
+            right: 0;
+            bottom: -3.5%;
+            margin: 0 auto;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 25%;
         }
+
+        /*ear left*/
+        .left-ear--outer {
+            background: white;
+            border-radius: 90%;
+            width: 21%;
+            height: 12.5%;
+            position: absolute;
+            left: 20%;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .left-ear--inner {
+            background: pink;
+            border-radius: 90%;
+            width: 14%;
+            height: 11%;
+            position: absolute;
+            left: 23.5%;
+            top: 2%;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .left-ear--outer-2 {
+            border-radius: 90%;
+            width: 21%;
+            height: 15.5%;
+        }
+
+        .left-ear--inner-2 {
+            border-radius: 90%;
+            width: 14%;
+            height: 13%;
+            top: 2%;
+        }
+
+        .left-ear--outer-3 {
+            width: 21%;
+            height: 25.5%;
+        }
+
+        .left-ear--inner-3 {
+            width: 14%;
+            height: 23%;
+            top: 5%;
+        }
+
+        /*ear right*/
+        .right-ear--outer {
+            background: white;
+            border-radius: 90%;
+            width: 21%;
+            height: 12.5%;
+            position: absolute;
+            right: 20%;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .right-ear--inner {
+            background: pink;
+            border-radius: 90%;
+            width: 14%;
+            height: 11%;
+            position: absolute;
+            right: 23.5%;
+            top: 2%;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .right-ear--outer-2 {
+            width: 21%;
+            height: 15.5%;
+        }
+
+        .right-ear--inner-2 {
+            width: 14%;
+            height: 13%;
+            top: 2%;
+        }
+
+        .right-ear--outer-3 {
+            width: 21%;
+            height: 25.5%;
+        }
+
+        .right-ear--inner-3 {
+            width: 14%;
+            height: 23%;
+            top: 5%;
+        }
+
+        /*HEAD*/
+        .head {
+            height: 16%;
+            width: 72%;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            top: 7%;
+            margin: 0 auto;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .head--2 {
+            height: 20%;
+            top: 11%;
+        }
+
+        .head--3 {
+            height: 30%;
+            top: 15%;
+        }
+
+        /*EYE*/
+        .head__eye {
+            background: gray;
+            border-radius: 50%;
+            width: 5%;
+            height: 5%;
+            position: absolute;
+            top: 25%;
+        }
+
+        .head__eye-2 {
+            width: 5.5%;
+            height: 5.5%;
+            top: 31%;
+        }
+
+        .head__eye-3 {
+            width: 5.8%;
+            height: 5.8%;
+            top: 30%;
+        }
+
+        .head__eye--left {
+            left: 37%;
+        }
+
+        .head__eye--right {
+            right: 37%;
+        }
+
+        /*Clouds*/
+        .circle-base {
+            height: 90%;
+            width: 70%;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            top: 7%;
+            margin: 0 auto;
+        }
+
+        .circle--left {
+            height: 60%;
+            width: 50%;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 0;
+            top: 23%;
+            margin: 0 auto;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        .circle--right {
+            height: 60%;
+            width: 50%;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 50%;
+            top: 23%;
+            margin: 0 auto;
+            box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
+        }
+
+        /*ZigZag Mountain*/
+        .zig {
+            background: linear-gradient(135deg, #6A9F67 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #6A9F67 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #BA6D4F 25%, transparent 25%),
+                linear-gradient(-45deg, #BA6D4F 25%, transparent 25%);
+            background-size: 100px 100px;
+            background-color: #A6543E;
+            height: 18.3%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .zig--2 {
+            height: 29.4%;
+        }
+
+        .zig--3 {
+            height: 51.7%;
+        }
+
+        @media (max-width: 600px) {
+            .zig {
+                height: 24.3%;
+            }
+            .zig--2 {
+                height: 38.3%;
+            }
+    
+            .zig--3 {
+                height: 55.7%;
+            }
+          }
 
     </style>
 </head>
 
 <body>
     <div class="phone">
-        <div class="layer layer-1"></div>
-        <div class="layer layer-2"></div>
-        <div class="layer layer-3"></div>
-        <div class="layer layer-4"></div>
-        <div class="layer layer-5"></div>
-        <div class="layer layer-6"></div>
-        <div class="layer layer-7"></div>
+        <!--Bunny 1-->
+        <div class="layer layer-1">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <!--Bunny 2-->
+        <div class="layer layer-2">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head ">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <!-- Mountain 1 -->
+        <div class="layer layer-3">
+            <div class="zig"></div>
+        </div>
+        <!--Bunny 3-->
+        <div class="layer layer-4">
+            <div class="left-ear--outer left-ear--outer-2"></div>
+            <div class="left-ear--inner left-ear--inner-2"></div>
+            <div class="right-ear--outer right-ear--outer-2"></div>
+            <div class="right-ear--inner right-ear--inner-2"></div>
+            <div class="head head--2">
+                <div class="head__eye head__eye-2 head__eye--left"></div>
+                <div class="head__eye head__eye-2 head__eye--right"></div>
+            </div>
+        </div>
+        <!-- Mountain 2 -->
+        <div class="layer layer-5">
+            <div class="zig zig--2"></div>
+        </div>
+        <!--Bunny 4-->
+        <div class="layer layer-6">
+            <div class="left-ear--outer left-ear--outer-3"></div>
+            <div class="left-ear--inner left-ear--inner-3"></div>
+            <div class="right-ear--outer right-ear--outer-3"></div>
+            <div class="right-ear--inner right-ear--inner-3"></div>
+            <div class="head head--3">
+                <div class="head__eye head__eye-3 head__eye--left"></div>
+                <div class="head__eye head__eye-3 head__eye--right"></div>
+            </div>
+        </div>
+        <!-- Mountain 3 -->
+        <div class="layer layer-7">
+            <div class="zig zig--3"></div>
+        </div>
         <div class="layer layer-8"></div>
-        <div class="layer layer-9"></div>
-        <div class="layer layer-10"></div>
+        <!-- Cloud 1 -->
+        <div class="layer layer-9">
+            <div class="circle circle--left"></div>
+            <div class="circle circle--right"></div>
+            <div class="circle-base"></div>
+        </div>
+        <!-- Cloud 2 -->
+        <div class="layer layer-10">
+            <div class="circle circle--left"></div>
+            <div class="circle circle--right"></div>
+            <div class="circle-base"></div>
+        </div>
     </div>
 </body>
 

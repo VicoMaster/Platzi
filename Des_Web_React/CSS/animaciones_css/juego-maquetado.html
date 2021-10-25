@@ -94,7 +94,6 @@
         .layer-5 {
             overflow: hidden;
             z-index: 5;
-            border: 1px solid var(--color-shadow-sides);
             width: 80%;
             height: 44%;
             background: #BA6D4F;
@@ -120,7 +119,6 @@
         .layer-7 {
             overflow: hidden;
             z-index: 7;
-            border: 1px solid var(--color-shadow-sides);
             width: 60%;
             height: 25%;
             background: #BA6D4F;
@@ -359,6 +357,16 @@
             box-shadow: var(--shadow-phone-sides) var(--color-shadow-sides);
         }
 
+        .grass {
+            background-color: #6A9F67;
+            height: 18.3%;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            right: 0;
+            margin: 0 auto;
+        }
+
         /*ZigZag Mountain*/
         .zig {
             background: linear-gradient(135deg, #6A9F67 25%, transparent 25%) -50px 0,
@@ -370,17 +378,19 @@
             height: 18.3%;
             width: 100%;
             position: absolute;
-            top: 0;
+            top: 7%;
             right: 0;
             margin: 0 auto;
         }
 
         .zig--2 {
-            height: 29.4%;
+            height: 29.3%;
+            top: 10%;
         }
 
         .zig--3 {
-            height: 51.7%;
+            height: 51.5%;
+            top: 14%;
         }
 
         @media (max-width: 600px) {
@@ -425,6 +435,7 @@
         </div>
         <!-- Mountain 1 -->
         <div class="layer layer-3">
+            <div class="grass"></div>
             <div class="zig"></div>
         </div>
         <!--Bunny 3-->
@@ -440,6 +451,7 @@
         </div>
         <!-- Mountain 2 -->
         <div class="layer layer-5">
+            <div class="grass"></div>
             <div class="zig zig--2"></div>
         </div>
         <!--Bunny 4-->
@@ -455,6 +467,7 @@
         </div>
         <!-- Mountain 3 -->
         <div class="layer layer-7">
+            <div class="grass"></div>
             <div class="zig zig--3"></div>
         </div>
         <div class="layer layer-8"></div>

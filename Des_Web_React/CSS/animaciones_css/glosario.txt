@@ -15,4 +15,3 @@
     - animation-fill-mode(opcional)
     - animation-play-state(opcional)
 
-    

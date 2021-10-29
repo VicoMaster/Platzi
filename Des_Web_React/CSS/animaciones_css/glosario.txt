@@ -3,3 +3,16 @@
     - counter-increment: Incrementa un valor del contador.
     - content: Inserta el contenido generado (debe usarse con un pseudoelemento).
     - counter(): Función que agrega el valor de un contador a un elemento.
+
+> animations:
+    - animation
+    - animation-name
+    - animation-duration
+    - animation-timing-function(opcional)
+    - animation-delay(opcional)
+    - animation-iteration-count(opcional)
+    - animation-direction(opcional)
+    - animation-fill-mode(opcional)
+    - animation-play-state(opcional)
+
+    

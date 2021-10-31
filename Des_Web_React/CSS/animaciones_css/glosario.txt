@@ -15,3 +15,6 @@
     - animation-fill-mode(opcional)
     - animation-play-state(opcional)
 
+
+> PAGINA IMPORTANTE PARA SABER EL CONSUMO Y RENDIMIENTO DE LAS ANIMACIONES:
+https://csstriggers.com/

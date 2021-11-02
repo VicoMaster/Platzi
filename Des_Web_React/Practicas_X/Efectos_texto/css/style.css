@@ -1,0 +1,34 @@
+:root {
+    font-size: 62.5%;
+    --logotipo: #1a1a1a;
+    --profesion: #f2f2f2;
+    --primario: #2e5fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fruktur', cursive;
+    background: gray;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 80em;
+    min-height: 100vh;
+    width: 90%;
+}

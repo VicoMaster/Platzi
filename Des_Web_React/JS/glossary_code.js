@@ -120,6 +120,20 @@ function jugar(p, pc) {
             break;
     }
 }
+
+//PARA NO USAR Switch se pueden usar objetos
+const ADVERSARIO = 'Iron-Man';
+const LOKI_DISFRACES = {
+    'Iron-Man': 'Magneto',
+    Thor: 'Odin',
+    Hulk: 'Thanos',
+    'Spyder-Man': 'Iron-Man'
+}
+const LOKI_DEFAULT_DISFRAZ = 'Loki';
+const loki = LOKI_DISFRACES[ADVERSARIO] || LOKI_DEFAULT_DISFRAZ;
+console.log(loki);
+
+
 //Array
 var frutas = [];
 var masFrutas = frutas.push("Uvas"); //agregar

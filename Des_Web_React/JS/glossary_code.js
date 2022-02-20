@@ -178,6 +178,7 @@ const conteoRegresivo = (a) => {
     console.log(a)
     return conteoRegresivo(a - 1)
 }
+conteoRegresivo(10);
 //ejemplo de recursividad con una aplicación de un llamado a una api con metodo http, usando librería axios.
 const axios = require('axios')
 const llamarApi = async (url, llamados = 0) => {

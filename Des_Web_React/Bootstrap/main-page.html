@@ -24,6 +24,10 @@
             color: rgb(175, 175, 175);
         }
 
+        a:hover {
+            color: rgb(180, 235, 79);
+        }
+
         .carousel-item img {
             object-fit: cover;
             height: 40vh;
@@ -42,6 +46,41 @@
 
         .text-personal:hover {
             color: rgb(180, 235, 79) !important;
+        }
+
+        .btn-andres {
+            background: rgb(145, 192, 61);
+            border-color: rgb(180, 235, 79);
+        }
+
+        .btn-andres:hover {
+            background: rgb(119, 167, 36);
+            border-color: rgb(76, 104, 28);
+        }
+
+        .btn-andres:focus {
+            box-shadow: none;
+        }
+
+        .btn-andres-transparent {
+            border-color: rgb(180, 235, 79);
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn-andres-transparent:hover {
+            background: rgb(145, 192, 61);
+            border-color: rgb(180, 235, 79);
+            color: white;
+        }
+
+        .btn-andres-transparent:focus {
+            box-shadow: none;
+        }
+
+        .card img {
+            height: 25rem;
+            object-fit: cover;
         }
     </style>
     <!-- NAV -->
@@ -114,14 +153,15 @@
             <div class="overlay-carousel position-absolute top-0 start-0 end-0 bottom-0 p-4">
                 <div class="row h-100 d-flex flex-column justify-content-center text-center">
                     <div class="col-md-6 offset-md-6 offset-1 col-10">
-                        <h2>Andrés F. Rivera Lozano</h1>
-                            <h6>
-                                Desarrollador con formación autodidacta, en
-                                búsqueda constante de nuevas tecnologías
-                                que permitan mejorar las condiciones en cada sector.
-                            </h6>
-                            <a class="m-2" href="https://github.com/VicoMaster" target="_blank">GitHub</a>
-                            <button class="m-2">Conocer Más</button>
+                        <h2>Andrés F. Rivera Lozano</h2>
+                        <h6>
+                            Desarrollador con formación autodidacta, en
+                            búsqueda constante de nuevas tecnologías
+                            que permitan mejorar las condiciones en cada sector.
+                        </h6>
+                        <a class="btn btn-link m-2 btn-andres-transparent btn-outline-success"
+                            href="https://github.com/VicoMaster" target="_blank">GitHub</a>
+                        <button class="btn btn-success m-2 btn-andres">Conocer Más</button>
                     </div>
                 </div>
             </div>
@@ -142,6 +182,78 @@
         </div>
         <!-- /CARRUSEL -->
     </main>
+
+    <section class="container">
+        <div class="row mt-2 mb-2">
+            <div class="col-12 text-center">
+                <small>Conoce mis</small>
+                <h3>Intereses</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="container">
+        <div class="row">
+            <!-- card -->
+            <div class="col-md-6 col-lg-4 col-12 p-2">
+                <div class="card" style="min-height: 40rem;">
+                    <img src="img/smart-cities.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Cities</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="col-md-6 col-lg-4 col-12 p-2">
+                <div class="card" style="min-height: 40rem;">
+                    <img src="img/martial-arts.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Martial Arts</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="col-md-6 col-lg-4 col-12 p-2">
+                <div class="card" style="min-height: 40rem;">
+                    <img src="img/hydroponics.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agrotech</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="col-md-6 col-lg-4 col-12 p-2">
+                <div class="card" style="min-height: 40rem;">
+                    <img src="img/web-design.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño Web</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Cards -->
 
     <!-- FOOTER -->
     <footer class="bg-dark bg-gradient">

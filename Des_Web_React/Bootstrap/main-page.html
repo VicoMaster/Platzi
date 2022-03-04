@@ -21,13 +21,27 @@
 
         a {
             text-decoration: none;
-            color: white;
+            color: rgb(175, 175, 175);
         }
 
         .carousel-item img {
             object-fit: cover;
             height: 40vh;
             filter: grayscale(70%);
+        }
+
+        .overlay-carousel {
+            background-color: rgba(0, 0, 0, .5);
+            z-index: 899;
+            color: white;
+        }
+
+        .text-personal {
+            color: rgb(153, 202, 63) !important;
+        }
+
+        .text-personal:hover {
+            color: rgb(180, 235, 79) !important;
         }
     </style>
     <!-- NAV -->
@@ -64,7 +78,8 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <!-- <a class="nav-link disabled">Disabled</a> -->
+                        <a href="#" class="nav-link text-personal">Contacto</a>
                     </li>
                 </ul>
 
@@ -75,8 +90,9 @@
 
     <main>
         <!-- CARRUSEL -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-pause=“false”
+            data-bs-ride="carousel">
+            <div class="carousel-inner position-relative">
                 <div class="carousel-item active">
                     <img src="img/1.webp" class="d-block w-100" alt="...">
                 </div>
@@ -93,7 +109,25 @@
                     <img src="img/5.webp" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <!-- 
+
+            <!-- TEXTO EN CARRUSEL -->
+            <div class="overlay-carousel position-absolute top-0 start-0 end-0 bottom-0 p-4">
+                <div class="row h-100 d-flex flex-column justify-content-center text-center">
+                    <div class="col-md-6 offset-md-6 offset-1 col-10">
+                        <h2>Andrés F. Rivera Lozano</h1>
+                            <h6>
+                                Desarrollador con formación autodidacta, en
+                                búsqueda constante de nuevas tecnologías
+                                que permitan mejorar las condiciones en cada sector.
+                            </h6>
+                            <a class="m-2" href="https://github.com/VicoMaster" target="_blank">GitHub</a>
+                            <button class="m-2">Conocer Más</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /TEXTO EN CARRUSEL -->
+
+            <!--  COMENTADO POR NO USAR LAS FLECHAS
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -112,26 +146,26 @@
     <!-- FOOTER -->
     <footer class="bg-dark bg-gradient">
         <div class="container-lg">
-            <div class="row p-4 d-flex align-items-center justify-content-center text-center">
-                <div class="col-12 col-md mt-1">
+            <div class="row p-4 d-flex align-items-center justify-content-center text-md-center text-start">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Preguntas frecuentes</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Contáctanos</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Prensa</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Conferencias</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Términos y condiciones</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Privacidad</a>
                 </div>
-                <div class="col-12 col-md mt-1">
+                <div class="col-6 col-md mt-1">
                     <a href="#">Estudiantes</a>
                 </div>
             </div>

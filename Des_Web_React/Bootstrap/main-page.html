@@ -15,6 +15,11 @@
 
 <body>
     <style>
+        body {
+            background-color: rgb(18, 31, 61);
+            color: white;
+        }
+
         .background-blue {
             background: rgb(3, 9, 30);
         }
@@ -81,6 +86,10 @@
         .card img {
             height: 25rem;
             object-fit: cover;
+        }
+
+        .card {
+            background-color: rgb(36, 56, 91);
         }
     </style>
     <!-- NAV -->
@@ -186,15 +195,15 @@
     <section class="container">
         <div class="row mt-2 mb-2">
             <div class="col-12 text-center">
-                <small>Conoce mis</small>
-                <h3>Intereses</h3>
+                <small class="text-muted">Conoce mis</small>
+                <h3 class="text-uppercase">Intereses</h3>
             </div>
         </div>
     </section>
     <!-- /TITLE -->
 
     <!-- Cards -->
-    <section class="container">
+    <section class="container mb-4">
         <div class="row">
             <!-- card -->
             <div class="col-md-6 col-lg-4 col-12 p-2">
@@ -288,6 +297,89 @@
     </section>
     <!-- /Cards -->
 
+    <!-- TITLE -->
+    <section class="container">
+        <div class="row mt-2 mb-2">
+            <div class="col-12 text-center">
+                <small class="text-muted">Quien és</small>
+                <h3 class="text-uppercase">Andrés Rivera</h3>
+            </div>
+        </div>
+    </section>
+    <!-- /TITLE -->
+
+    <!-- SOBRE MI -->
+    <section class="section-sobremi">
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12 col-md-6  ps-0 pe-0">
+                    <img class="w-100" src="img/yo.jpg" alt="Imagen de Andrés Rivera">
+                </div>
+                <div class="col-12 col-md-6 pt-4 pb-4">
+                    <h1>Visionario, autodidacta, innovador</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo excepturi beatae?
+                        Commodi maiores eaque exercitationem quis laboriosam voluptate! Reprehenderit saepe amet
+                        necessitatibus corporis, voluptatum sit a modi tempore. Non!
+                        Nisi maxime exercitationem illo corporis rerum minima vel magni? Explicabo libero quam est hic
+                        aut a nobis iure id! Ab sed, reiciendis ut tenetur porro voluptatibus qui quos libero inventore.
+                    </p>
+                    <div class="container w-100 text-center">
+                        <a style="max-width: max-content;"
+                            class="btn btn-link m-2 btn-andres-transparent btn-outline-success"
+                            href="https://github.com/VicoMaster" target="_blank">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TITLE -->
+    <section class="container">
+        <div class="row mt-2 mb-2">
+            <div class="col-12 text-center">
+                <small class="text-muted">¿Quieres decirme algo?</small>
+                <h3 class="text-uppercase">Contáctame</h3>
+            </div>
+        </div>
+    </section>
+    <!-- /TITLE -->
+
+    <!-- CONTACT FORM -->
+    <section class="contact-form">
+        <div style="background-color: rgb(36, 56, 91); border-radius: 8px;" class="container mt-3 mb-3 p-4">
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating" style="color: black;">
+                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="correo@ejemplo.com"
+                            value="">
+                        <label for="floatingInputGrid">Tu correo</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating" style="color: black;">
+                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected>Comentario</option>
+                            <option value="1">Tengo un trabajo para ti</option>
+                            <option value="2">Quiero trabajar contigo</option>
+                            <option value="3">Sugerencia</option>
+                        </select>
+                        <label for="floatingSelectGrid">Asunto</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Sobre qué quieres contarme"></textarea>
+                    <small class="text-muted">Recuerda ser 
+                        <abbr data-bs-toggle="tooltip" data-bs-placement="right" title="Se breve y preciso.">conciso</abbr>
+                    </small>
+                </div>
+                <button class="btn btn-success m-2 form-control btn-andres">Enviar</button>
+            </div>
+        </div>
+    </section>
+    <!-- /CONTACT FORM -->
+
     <!-- FOOTER -->
     <footer class="bg-dark bg-gradient">
         <div class="container-lg">
@@ -324,6 +416,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <!-- JS PARA TOOLTIP -->
+    <script src="tooltipBT.js"></script>
 
 </body>
 

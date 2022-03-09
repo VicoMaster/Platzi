@@ -11,13 +11,12 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Main | Bootstrap</title>
-</head>
 
-<body>
     <style>
         body {
             background-color: rgb(18, 31, 61);
             color: white;
+            position: relative;
         }
 
         .background-blue {
@@ -91,9 +90,17 @@
         .card {
             background-color: rgb(36, 56, 91);
         }
+
+        .color-font-black {
+            color: black;
+        }
     </style>
+</head>
+
+<body id="inicio" data-bs-spy="scroll" data-bs-target="#navegation-menu" data-bs-offset="150">
+
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navegation-menu" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container container-lg">
             <a class="navbar-brand" href="#">
                 <p class="mt-3"><img src="img/style_bar_glass.png" width="50px" alt=""> AndrésR.</p>
@@ -106,28 +113,21 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#intereses">Intereses</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ar">Andrés Rivera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <!-- <a class="nav-link disabled">Disabled</a> -->
-                        <a href="#" class="nav-link text-personal">Contacto</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="nav-link text-personal">Pagos</a>
                     </li>
                 </ul>
 
@@ -136,7 +136,8 @@
     </nav>
     <!-- /NAV -->
 
-    <main>
+
+    <main class="mb-5">
         <!-- CARRUSEL -->
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-pause=“false”
             data-bs-ride="carousel">
@@ -170,7 +171,7 @@
                         </h6>
                         <a class="btn btn-link m-2 btn-andres-transparent btn-outline-success"
                             href="https://github.com/VicoMaster" target="_blank">GitHub</a>
-                        <button class="btn btn-success m-2 btn-andres">Conocer Más</button>
+                        <button id="intereses" class="btn btn-success m-2 btn-andres">Conocer Más</button>
                     </div>
                 </div>
             </div>
@@ -286,7 +287,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Diseño Web</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">
+                        <p id="ar" class="card-text">
                             Some quick example text to build on the card title and make up the bulk of the card's
                             content.
                         </p>
@@ -320,8 +321,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo excepturi beatae?
                         Commodi maiores eaque exercitationem quis laboriosam voluptate! Reprehenderit saepe amet
                         necessitatibus corporis, voluptatum sit a modi tempore. Non!
-                        Nisi maxime exercitationem illo corporis rerum minima vel magni? Explicabo libero quam est hic
-                        aut a nobis iure id! Ab sed, reiciendis ut tenetur porro voluptatibus qui quos libero inventore.
+                        Nisi maxime exercitationem illo corporis rerum minima vel magni? Explicabo libero quam est
+                        hic
+                        aut a nobis iure id! Ab sed, reiciendis ut tenetur porro voluptatibus qui quos libero
+                        inventore.
                     </p>
                     <div class="container w-100 text-center">
                         <a style="max-width: max-content;"
@@ -345,7 +348,7 @@
     <!-- /TITLE -->
 
     <!-- CONTACT FORM -->
-    <section class="contact-form">
+    <section id="contacto" class="contact-form">
         <div style="background-color: rgb(36, 56, 91); border-radius: 8px;" class="container mt-3 mb-3 p-4">
             <div class="row g-2">
                 <div class="col-md">
@@ -370,8 +373,9 @@
                     <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Sobre qué quieres contarme"></textarea>
-                    <small class="text-muted">Recuerda ser 
-                        <abbr data-bs-toggle="tooltip" data-bs-placement="right" title="Se breve y preciso.">conciso</abbr>
+                    <small class="text-muted">Recuerda ser
+                        <abbr data-bs-toggle="tooltip" data-bs-placement="right"
+                            title="Se breve y preciso.">conciso</abbr>
                     </small>
                 </div>
                 <button class="btn btn-success m-2 form-control btn-andres">Enviar</button>
@@ -410,6 +414,42 @@
     </footer>
     <!-- /FOOTER -->
 
+    <!-- MODALS -->
+    <div class="modal fade color-font-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- CONTENIDO MODAL -->
+
+                    <div class="input-group mb-3">
+                        <div class="input-group col-12">
+                            <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-text">@</div>
+                                <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                    placeholder="Username">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="input-group mb-3 alert alert-warning" role="alert">
+                        Será enviado un correo al confirmar su Usuario
+                    </div>
+                    <!-- /CONTENIDO MODAL -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MODALS -->
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -1,0 +1,11 @@
+> Pilares de la POO:
+    - Objetos: Son aquellos que tienen propiedades(atributos) y comportamientos.
+        -- Objeto fisico (Usuario).
+        -- Objeto Conceptual (Session).
+    - Clases: Son los modelos sobre los cuales construiremos objetos. Clases en archivos diferentes.
+    - Encapsulamiento:
+    - Abstracción: (analisis) Cuando abstraemos los datos de un objeto para generar un molde.
+    - Herencia:
+    - Polimorfismo:
+
+> Superclase (Clase padre): Tendrá los atributos que se repitan a lo largo de las clases hijas.

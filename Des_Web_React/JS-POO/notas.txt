@@ -7,5 +7,13 @@
     - Abstracción: (analisis) Cuando abstraemos los datos de un objeto para generar un molde.
     - Herencia: Reutilizar código ya escrito en otras clases.
     - Polimorfismo: Sobre escribir código para añadir o modificar comportamientos a metodos heredados.
+        -- Sobrecarga: Para metodos
+        -- Paramétrico: Para parametros
+        -- Inclusión: para incluir más código
+        EN JS SOLO PODEMOS USAR A LA FECHA 16-03-2022 EL DE INCLUSIÓN
 
 > Superclase (Clase padre): Tendrá los atributos que se repitan a lo largo de las clases hijas.
+
+> Metodos y Atributos STATIC: Atributos que se compartiran para cualquier nivel de accesibilidad de los objetos.
+
+> Factory Pattern - RORO : Son patrones que nos ayudan a crear moldes de objetos con funciones.

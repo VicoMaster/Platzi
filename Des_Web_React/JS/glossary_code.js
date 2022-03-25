@@ -335,6 +335,8 @@ arr.sort( comparar );  // [ 1, 5, 40, 200 ]
  * array: El array sobre el que se llama map.
  * thisArg: Opcional. Valor a usar como this al ejecutar callback.
  */
+//MAP SE USA PARA TRANSFORMAR
+
 const lista1 = [6,4,9,1, 2, 3, 1, 2, 3, 4, 2, 2, 2, 1, 6];
 const lista1Count = {};
 lista1.map(

@@ -1,19 +1,18 @@
 async function consultaApi(params = {}) {
     const { API_BASE } = params;
     const BASE_URL_API = API_BASE || 'https://www.datos.gov.co/resource/2pnw-mmge.json?$limit=5';
-    let resultadoConsulta = undefined;
+    let resultadoConsulta = {};
     await fetch(BASE_URL_API)
         .then(response => {
-            resultadoConsulta = response.statusText;
-            console.log(`Ejecutado con código: ${response.status}`);
+            resultadoConsulta['status'] = response.status;
+            console.log(`Respuesta: ${response.statusText}`);
             return response.json()
         })
         .then(data => {
-            console.log('SUCCESS');
-            resultadoConsulta = data;
+            resultadoConsulta['data'] = data;
         }).catch(error => {
             console.log('ERROR EN PETICIÓN');
-            resultadoConsulta = error;
+            resultadoConsulta[error] = error;
         });
 
     return resultadoConsulta;
@@ -21,14 +20,17 @@ async function consultaApi(params = {}) {
 
 async function imprimirConsulta() {
     const resultado = await consultaApi();
-    let sumaProducidos = 0;
 
-    Object.keys(resultado).forEach(registro => {
-        const { producci_n_t: producido } = resultado[registro];
-        sumaProducidos += parseInt(producido, 10);
-    })
-    console.log(resultado);
-    console.log("RESULTADO: ", sumaProducidos);
+    if (resultado.status === 200) {
+        let sumaProducidos = 0;
+        const { data: DATA } = resultado;
+        Object.keys(DATA).forEach(registro => {
+            const { producci_n_t: producido } = DATA[registro];
+            sumaProducidos += parseInt(producido, 10);
+        });
+        const $SPAN_CULTIVOS = document.getElementById('cantidadCultivos');
+        $SPAN_CULTIVOS.textContent = sumaProducidos;
+    }
 }
 
 imprimirConsulta();

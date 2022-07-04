@@ -18,7 +18,7 @@ async function consultaApi(params = {}) {
     return resultadoConsulta;
 }
 
-async function imprimirConsulta() {
+export async function imprimirConsulta() {
     const resultado = await consultaApi();
 
     if (resultado.status === 200) {
@@ -33,4 +33,4 @@ async function imprimirConsulta() {
     }
 }
 
-imprimirConsulta();
+export { imprimirConsulta };

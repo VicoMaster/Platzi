@@ -1,0 +1,16 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "Un test de primer paquete con node",
+  "main": "assets/consultas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "consultas.js"
+  },
+  "keywords": [
+    "Testnode",
+    "primertest"
+  ],
+  "author": "AndresR.Dev",
+  "license": "MIT"
+}

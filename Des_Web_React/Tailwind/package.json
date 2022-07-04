@@ -4,7 +4,8 @@
   "description": "Primer code para aprendizaje de tailwind, lo que se haga acá es meramente educativo",
   "main": "assets/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailcss": "npx tailwindcss -i ./dist/assets/tailwind.css -o ./dist/assets/main.css",
+    "postcss": "postcss -o ./dist/assets/main.css ./dist/assets/tailwind.css --watch"
   },
   "keywords": [
     "Tailwind",
@@ -15,8 +16,11 @@
   "author": "AndresR.dev",
   "license": "MIT",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
     "tailwindcss": "^3.1.4"
   }
 }

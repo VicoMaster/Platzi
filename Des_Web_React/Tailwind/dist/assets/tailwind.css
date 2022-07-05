@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.cosa {
-    color: black;
-    text-align: center;
-    background-color: aliceblue;
-    display: flex;
+@layer components {
+    .btn {
+      @apply py-2 px-4 font-semibold 
+      rounded-lg shadow-md focus:outline-none;
+    }
+    .btn-primary {
+        @apply btn;
+        @apply bg-blue-500 text-white 
+        hover:bg-blue-700 focus:ring-2 
+        focus:ring-blue-400 focus:ring-opacity-75;
+    }
 }

@@ -1,0 +1,27 @@
+
+-----------------------------------------------------------------------------------------------------------
+contructor() -> connectedCallback() ->  AttributeChangedCallback()    || Casos raros: AdoptedCallbac()
+                                    |-> disconectedCallback()
+-----------------------------------------------------------------------------------------------------------
+
+
+CICLO DE VIDA DE UN WEB COMPONENTE:
+
+El ciclo de vida de un componente están 100% ligados al dom porque son estándares y esto existe en el navegador son parte fundamental del critical renderig path.
+
+* Constructor():
+    Cuando se genera el constructor se guarda en memoría lo que tiene la clase (componente). Se debe extender de la clase a usar para manejar el componente.
+
+* Connected Callback():
+    Cuando el elemento que seria nuestro componente ya hace parte del dom y aqui es cuando podemos realizar cierta actividad importante del componente como empezar a renderizar todo el html y css.
+    Es mala practica pintar el template directamente esto es malo ya que en el constructor debemos asegurarnos que todo lo que tiene que estar en memoria exista en ese momento para cuando queramos pintar el elemento en el dom
+
+* Disconected Callback():
+    El momento en que quitamos un elemento lo estamos desconectando del dom, esto es importante ya que en el momento de eliminar estos elementos pueden tener cierta funcionalidad que también tenemos que desconectar para liberar memoria.
+    Eliminar cada nodo dentro del padre antes de eliminar el componente con .remove();
+
+* AttributeChangedCallback():
+    Es importante porque es la forma en la cual dentro del componente vamos a ver los atributos de nuestra etiqueta html, que viene siendo el componente creado. Si tenemos ciertos cambios en los atributos este nos lo va a indicar para poder hacer cambios adentro del componente.
+
+* AdoptedCallback()
+    Cuando se ocupa un componente dentro de un iframe por ejemplo. Es mala practica utilizarlo por performance y por mala experiencia para el usuario.

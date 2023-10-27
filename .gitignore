@@ -12,6 +12,8 @@ JQuery/chosen
 **/*cpython*/*
 **/**node_modules/*
 **/**node_modules/*
+**/**node_modules
+node_modules
 jspm_packages/
 **/jspm_packages/
 # Built Visual Studio Code Extensions
@@ -209,7 +211,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/

@@ -234,3 +234,18 @@ lerna-debug.log*
 **/yarn-error.log*
 **/lerna-debug.log*
 **/.pnpm-debug.log*
+
+### Google Drive Sync
+**/.tmp.**
+**/.tmp.**/
+**/.tmp.**/
+**/.tmp.drivedownload
+**/.tmp.drivedownload*
+**/.tmp.drivedownload/*
+**/.tmp.drivedownload/
+**/.tmp.driveupload
+**/.tmp.driveupload*
+**/.tmp.driveupload/*
+**/.tmp.driveupload/
+**/desktop.ini*
+**/desktop.ini

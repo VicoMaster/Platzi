@@ -67,7 +67,7 @@ docker volume ls
 ```
 docker run -d --name db --mount src=dbdata,dst=/data/db mongo
 ```
-El src=<nombreVolumen>,dst=<rutaDelaDBContenedor>
+El src=nombreVolumen,dst=rutaDelaDBContenedor
 ## Copiar un archivo dentro de un contenedor desde maquina Host
 ```
 docker cp prueba.txt copytest:/testing/test.txt
@@ -77,8 +77,8 @@ docker cp prueba.txt copytest:/testing/test.txt
 
 
 # Códigos de Salida en procesos Linux
-0: Éxito. El programa se ejecutó correctamente sin errores.
-1: Error genérico. Este código se utiliza comúnmente para indicar un error no especificado.
-2: Error grave. Indica un error más grave o un problema crítico.
-127: Comando no encontrado. Este código se utiliza cuando el sistema no puede encontrar el comando que intentas ejecutar.
-126: No se puede ejecutar. Indica que el archivo es ejecutable pero no se pudo ejecutar por alguna razón.
+- 0: Éxito. El programa se ejecutó correctamente sin errores.
+- 1: Error genérico. Este código se utiliza comúnmente para indicar un error no especificado.
+- 2: Error grave. Indica un error más grave o un problema crítico.
+- 127: Comando no encontrado. Este código se utiliza cuando el sistema no puede encontrar el comando que intentas ejecutar.
+- 126: No se puede ejecutar. Indica que el archivo es ejecutable pero no se pudo ejecutar por alguna razón.

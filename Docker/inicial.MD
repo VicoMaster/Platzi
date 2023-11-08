@@ -73,6 +73,29 @@ El src=nombreVolumen,dst=rutaDelaDBContenedor
 docker cp prueba.txt copytest:/testing/test.txt
 ```
 <ruta_origen>:<ruta_destino/nombre_archivo.txt>
+## Copiar un archivo/directorio desde un contenedor hasta maquina Host
+```
+docker cp copytest:/testing hostdirectory
+```
+Se copia desde contenedor hasta ruta local
+## listar imagenes de docker
+```
+docker image ls
+```
+## Traer una imagen de un repositorio
+```
+docker pull ubuntu:20.04
+```
+## Contenido del Dockerfile
+```
+FROM ubuntu:latest 
+RUN touch /ust/src/hola-platzi.txt
+```
+## Crear una imagen
+```
+docker build -t ubuntu:platzi .
+```
+-t = tag. El "punto" del final representa la ruta del contexto que deseamos para decirle a que ruta de archivos podrá acceder el contenedor. Cuando en esta ruta existe un Dockerfile en la ruta donde ejecutamos el build, tomará la configuración del dockerfile
 
 
 

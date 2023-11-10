@@ -98,12 +98,15 @@ docker build -t ubuntu:platzi .
 -t = tag. El "punto" del final representa la ruta del contexto que deseamos para decirle a que ruta de archivos podrá acceder el contenedor. Cuando existe un Dockerfile en la ruta donde ejecutamos el build, tomará la configuración del dockerfile y ordenes e ¿n tiempo de build.
 
 Una imagen en docker es un conjunto de capas, cada capa se genera con una instrucción ejecutada. Se podría decir que cada capa nueva es una diferencia con la capa anterior, similar a como funciona el arbol de git.
-
 ## Re taggear o renombrar imagen
 ```
 docker tag ubuntu:platzi azanorivers/ubuntu:platzi
 ```
 Esto cambia el nombre del "repository" que se ve haciendo ```docker image ls```. Esto hará que sea posible publicarlo en nuestro repositorio 
+## Ver el history de una capa
+```
+docker history ubuntu:platzi
+```
 
 
 # Códigos de Salida en procesos Linux

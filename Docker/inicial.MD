@@ -2,6 +2,14 @@
 Comandos utiles para docker
 
 
+# Códigos de Salida en procesos Linux
+- 0: Éxito. El programa se ejecutó correctamente sin errores.
+- 1: Error genérico. Este código se utiliza comúnmente para indicar un error no especificado.
+- 2: Error grave. Indica un error más grave o un problema crítico.
+- 127: Comando no encontrado. Este código se utiliza cuando el sistema no puede encontrar el comando que intentas ejecutar.
+- 126: No se puede ejecutar. Indica que el archivo es ejecutable pero no se pudo ejecutar por alguna razón.
+
+
 ## Ver contenedores corriendo
 ```
 docker ps
@@ -107,11 +115,68 @@ Esto cambia el nombre del "repository" que se ve haciendo ```docker image ls```.
 ```
 docker history ubuntu:platzi
 ```
+## Crear una RED en Docker
+```
+docker network create --attachable plazinet
+```
+## Conectar un contenedor a la red creada
+```
+docker network connect platzinet
+```
+## Listar redes
+```
+docker network ls
+```
+## Inspeccionar red
+```
+docker network inspect <network_name>
+```
+## Correr un contenedor creando una nueva variable de entorno
+```
+docker run --env DATABASE_URL="mi_conexion_a_bd" mi_imagen_docker
+```
 
 
-# Códigos de Salida en procesos Linux
-- 0: Éxito. El programa se ejecutó correctamente sin errores.
-- 1: Error genérico. Este código se utiliza comúnmente para indicar un error no especificado.
-- 2: Error grave. Indica un error más grave o un problema crítico.
-- 127: Comando no encontrado. Este código se utiliza cuando el sistema no puede encontrar el comando que intentas ejecutar.
-- 126: No se puede ejecutar. Indica que el archivo es ejecutable pero no se pudo ejecutar por alguna razón.
+## Estructura de un Docker-compose
+```
+# Versión del compose file
+version: "3.8"
+
+# Servicios que componen nuestra aplicación.
+## Un servicio puede estar compuesto por uno o más contenedores.
+services:
+# nombre del servicio.
+  app:
+  # Imagen a utilizar.
+    image: platziapp
+	# Declaración de variables de entorno.
+    environment:
+      MONGO_URL: "mongodb://db:27017/test"
+	# Indica que este servicio depende de otro, en este caso DB.
+	# El servicio app solo iniciara si el servicio debe inicia correctamente.
+    depends_on:
+      - db
+	# Puerto del contenedor expuesto.
+    ports:
+      - "3000:3000"
+
+  db:
+    image: mongo
+```
+## Correr docker-compose
+```
+docker-compose up -d
+```
+## Detener y eliminar todos los servicios generados
+```
+docker-compose down
+```
+
+
+## Comandos avanzados para eliminar
+```
+sudo docker rm -vf $(sudo docker ps -a -q)
+sudo docker rmi -f $(sudo docker images -a -q)
+sudo docker system prune -f
+sudo docker volume prune -f
+```

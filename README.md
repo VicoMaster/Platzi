@@ -1,2 +1,2 @@
 # Aprendizaje Autodidacta
-Desarrollo Autodidacta
+Aprendizajes Platzi y notas

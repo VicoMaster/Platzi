@@ -5,12 +5,14 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "npx tsc parametros-rest.ts --outDir dist"
+    "compile": "npx tsc src/parametros-rest.ts --outDir dist",
+    "compilew": "tsc-watch --onSuccess \"npx tsc --outDir dist\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "tsc-watch": "^6.0.4",
     "typescript": "^5.2.2"
   }
 }

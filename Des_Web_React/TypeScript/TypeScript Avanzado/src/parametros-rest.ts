@@ -5,4 +5,4 @@ function recibeMuchosParameters(...params: string[]) {
     });
 }
 recibeMuchosParameters('1', '2', '3', '4', '6',);
-console.log('Esto es un cambio desde src 3');
+console.log('Esto es un cambio desde src 4');

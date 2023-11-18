@@ -1,0 +1,13 @@
+# Creamos la imagen con la configuración en el dockerfile
+docker build -t devcode .
+
+
+# Creamos el contenedor con tag "typescriptconainer" y montamos un bind mount
+docker run -itd --name typescriptcontainer -v  D:\__Containers_Docker\testTypeScript\dist:/devcode/typescript/app/dist devcode
+
+
+# Creamos una terminal dentro del contenedor
+docker exec -it typescriptcontainer /bin/bash
+
+echo "Hola Mundo" > archivo.txt
+echo "¡Hola de nuevo!" >> archivo.txt

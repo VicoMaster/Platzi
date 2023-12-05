@@ -21,7 +21,7 @@ interface Persona {
 
 
 const person = {
-    name: "VicoMaster",
+    name: "VicoMasterT",
     //readonly age: 30,
 };
 

@@ -16,13 +16,13 @@ interface Persona {
   
   let personas: Array<Persona>;
   
-  personas = [{ nombre: "VicoMaster", edad: 30 }, { nombre: "Juan", edad: 25 }];
+  //personas = [{ nombre: "VicoMaster", edad: 30 }, { nombre: "Juan", edad: 25 }];
 
 
 
 const person = {
     name: "VicoMaster",
-    readonly age: 30,
+    //readonly age: 30,
 };
 
 // La propiedad age solo se puede asignar una vez

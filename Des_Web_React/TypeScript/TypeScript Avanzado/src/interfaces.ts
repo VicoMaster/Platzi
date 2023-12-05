@@ -10,7 +10,7 @@
     Puede usarse para definir el tipo de una función	|Sí 	|Sí
     Puede usarse para definir el tipo de una clase	    |Sí 	|Sí
 
- */
+ **/
 
 
 // Interfaz básica
@@ -45,3 +45,24 @@ const gato = {
 // Esta función alimentará a cualquier objeto que implemente la interfaz Animal
 alimentar(perro);
 alimentar(gato);
+
+
+/**
+    Una interfaz se puede extender para agregar nuevas propiedades o métodos a esa interfaz. 
+    Para extender una interfaz, se usa la palabra clave extends
+ **/
+interface AnimalId extends Animal {
+    age: number;
+    rh: string;
+    home: boolean;
+}
+
+const PIMIENTA: AnimalId = {
+    nombre: "Pimienta",
+    tipo: "Perro",
+    age: 7,
+    rh: "A+",
+    home: true,
+}
+
+console.log(PIMIENTA);
